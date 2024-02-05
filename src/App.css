@@ -1,0 +1,76 @@
+.bg-pages {
+  background: url("/public/bgImage.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.animatebtn {
+  /* width: 100px;
+  height: 100px;
+  background: red;
+  position: relative; */
+  border-radius: 18px;
+  animation: mymove 2s infinite ease-in-out;
+}
+
+@keyframes mymove {
+  0% {
+    /* border-top-left-radius: 2px; */
+    border-top: 1px solid red;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+  }
+  25% {
+    border-right: 1px solid red;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+  }
+  50% {
+    border-bottom: 1px solid red;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+  }
+  75% {
+    border-left: 1px solid red;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+  100% {
+    border-top: 1px solid red;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+  }
+}
+
+@keyframes changeGradientOrigin {
+  0% {
+    /* background-position: 0% 0%; */
+    background: radial-gradient(circle at 50% 0%, #ff6600, #f8f7f5);
+  }
+  25% {
+    /* background-position: 10% 10%; */
+    background: radial-gradient(circle at 150% 150%, #ff6600, #f8f7f5);
+  }
+  50% {
+    /* background-position: 100% 100%; */
+    background: radial-gradient(circle at 50% 150%, #ff6600, #f8f7f5);
+  }
+  75% {
+    /* background-position: 100% 100%; */
+    background: radial-gradient(circle at 0% 150%, #ff6600, #f8f7f5);
+  }
+  100% {
+    /* background-position: 0% 0%; */
+    background: radial-gradient(circle at 30% 0%, #ff6600, #f8f7f5);
+  }
+}
+
+.animated-radial {
+  background: radial-gradient(circle at 30% 0%, #ff6600, #f8f7f5);
+  animation: changeGradientOrigin 2s infinite ease-in-out;
+}
