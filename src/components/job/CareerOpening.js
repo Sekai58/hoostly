@@ -26,7 +26,7 @@ const OpeningCard = () => {
 
 const Opening = () => {
   return (
-    <div className="px-container pt-top">
+    <div className="px-container pt-top pb-10">
       <Header
         title="Curront openings"
         subTitle="Do you think you are a good fit? Apply now. We would love to meet you."

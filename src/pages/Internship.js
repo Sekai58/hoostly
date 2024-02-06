@@ -7,17 +7,20 @@ import Opening from "../components/job/InternOpening";
 import Novice from "../components/job/Novice";
 import Application from "../components/job/Application";
 import { internApplicationData } from "../assets/data/applicationData";
+import { faqData } from "../assets/data/faqData";
+import { internBenefits } from "../assets/data/benefitsData";
+import { internHeroData } from "../assets/data/heroData";
 
 const Internship = () => {
   return (
     <>
-      <HeroSection />
+      <HeroSection data={internHeroData} />
       <Intro />
       <Application data={internApplicationData} />
-      <Benefits />
+      <Benefits data={internBenefits} />
       <Novice />
       <Opening />
-      <Faq />
+      <Faq data={faqData} />
     </>
   );
 };

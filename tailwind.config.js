@@ -24,6 +24,9 @@ module.exports = {
         errorColor: "#d63031",
         white: "#ffffff",
       },
+      animation: {
+        "slow-bounce": "bounce 1.5s infinite",
+      },
     },
   },
   plugins: [],

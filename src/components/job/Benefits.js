@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-import { MdOutlinePaid } from "react-icons/md";
 
 const BenefitCard = ({ icon, title, content }) => {
   return (
@@ -13,7 +12,7 @@ const BenefitCard = ({ icon, title, content }) => {
   );
 };
 
-const Benefits = () => {
+const Benefits = ({ data }) => {
   return (
     <div className="bg-[#f7f8fb]">
       <Header
@@ -23,33 +22,17 @@ const Benefits = () => {
           experience the Leapfrog difference first-hand."
       />
       <section className="px-container flex flex-col items-center">
-        {/* <p className="flex flex-col items-center">
-          We provide more than a learning experience at Leapfrog. Our
-          internships are highly engaging, results-oriented and lets you
-          experience the Leapfrog difference first-hand.
-        </p> */}
-
         <div className="grid grid-cols-4 py-10 gap-16">
-          <BenefitCard
-            icon={<MdOutlinePaid className="text-3xl text-primary" />}
-            title="Paid Internship"
-            content="Our internships are fully paid throughout the internship tenure"
-          />
-          <BenefitCard
-            icon={<MdOutlinePaid className="text-3xl text-primary" />}
-            title="Paid Internship"
-            content="Our internships are fully paid throughout the internship tenure"
-          />
-          <BenefitCard
-            icon={<MdOutlinePaid className="text-3xl text-primary" />}
-            title="Paid Internship"
-            content="Our internships are fully paid throughout the internship tenure"
-          />
-          <BenefitCard
-            icon={<MdOutlinePaid className="text-3xl text-primary" />}
-            title="Paid Internship"
-            content="Our internships are fully paid throughout the internship tenure"
-          />
+          {data?.map((item, idx) => {
+            return (
+              <BenefitCard
+                key={idx}
+                icon={item.icon}
+                title={item.title}
+                content={item.content}
+              />
+            );
+          })}
         </div>
       </section>
     </div>

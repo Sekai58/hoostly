@@ -24,3 +24,30 @@ export const internApplicationData = [
       "Begin your journey by submitting your application online. Our team will screen your application to see if you’re a good fit.",
   },
 ];
+
+export const careerApplicationData = [
+  {
+    step: "Step 1",
+    title: "CV Screening",
+    details:
+      "Begin your journey by submitting your application online. Our team will screen your application to see if you’re a good fit.",
+  },
+  {
+    step: "Step 1",
+    title: "CV Screening",
+    details:
+      "Begin your journey by submitting your application online. Our team will screen your application to see if you’re a good fit.",
+  },
+  {
+    step: "Step 1",
+    title: "CV Screening",
+    details:
+      "Begin your journey by submitting your application online. Our team will screen your application to see if you’re a good fit.",
+  },
+  {
+    step: "Step 1",
+    title: "CV Screening",
+    details:
+      "Begin your journey by submitting your application online. Our team will screen your application to see if you’re a good fit.",
+  },
+];

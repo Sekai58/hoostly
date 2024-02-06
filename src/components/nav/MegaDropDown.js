@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const MegaDropDown = ({ navTitle, menuData }) => {
   return (
     <motion.div
-      className="fixed top-[4rem] xl:top-[4.5rem] w-full  bg-white border-[#c0c0c0] border-t flex flex-col justify-between max-h-[calc(100dvh-4.5rem)] overflow-y-scroll"
+      className="fixed z-[99] top-[4rem] xl:top-[4.5rem] w-full  bg-white border-[#c0c0c0] border-t flex flex-col justify-between max-h-[calc(100dvh-4.5rem)] overflow-y-scroll"
       key={navTitle}
       initial={{ x: -100 }}
       animate={{ x: 0 }}

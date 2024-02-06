@@ -1,10 +1,13 @@
 import React from "react";
+import Images from "./Images";
 
 const Intro = () => {
   return (
-    <section className="px-container bg-[#f7f8fb]  grid grid-cols-2 gap-10 py-10">
-      <div>images here</div>
-      <aside className="">
+    <section className="px-container bg-[#f7f8fb]  grid grid-cols-2 gap-10">
+      <div className="w-full flex flex-col items-center">
+        <Images />
+      </div>
+      <aside className="py-10">
         <p className="uppercase">learn with best</p>
         <h3 className="text-3xl font-semibold my-5">It all starts here</h3>
         <p className="font-medium my-7">

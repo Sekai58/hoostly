@@ -1,13 +1,13 @@
 // import { Link } from "react-router-dom";
 import MegaDropDown from "./MegaDropDown";
 import { useEffect, useState } from "react";
-import { navDatas } from "../../assets/data/navaData";
+import { navDatas } from "../../assets/data/navData";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import AnimatedButton from "../button/AminatedButton";
+// import AnimatedButton from "../button/AminatedButton";
 import { motion } from "framer-motion";
-import Example from "../button/BorderAnimate";
+// import Example from "../button/BorderAnimate";
 import { useLocation } from "react-router-dom";
-import Test from "../button/Test";
+import GradientBtn from "../button/Gradient";
 
 const Navbar = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(null);
@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed  w-full ${
+        className={`fixed z-[99]  w-full ${
           showMegaMenu
             ? "bg-white"
             : `${scrolled ? "bg-white border-b" : "bg-transparent"}`
@@ -83,10 +83,7 @@ const Navbar = () => {
           })}
         </ul>
         <div className="flex gap-4 h-fit">
-          {/* <button className="bg-blue-200 px-1 rounded-md">Request Demo</button> */}
-          {/* <AnimatedButton value="Request Demo" />
-          <Example /> */}
-          <Test />
+          <GradientBtn label="Get in touch" />
         </div>
       </nav>
 

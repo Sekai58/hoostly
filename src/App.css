@@ -13,40 +13,6 @@
   animation: mymove 2s infinite ease-in-out;
 }
 
-@keyframes mymove {
-  0% {
-    /* border-top-left-radius: 2px; */
-    border-top: 1px solid red;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-  }
-  25% {
-    border-right: 1px solid red;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-  }
-  50% {
-    border-bottom: 1px solid red;
-    border-right: 1px solid white;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-  }
-  75% {
-    border-left: 1px solid red;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-  }
-  100% {
-    border-top: 1px solid red;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-  }
-}
-
 @keyframes changeGradientOrigin {
   0% {
     /* background-position: 0% 0%; */
@@ -73,4 +39,12 @@
 .animated-radial {
   background: radial-gradient(circle at 30% 0%, #ff6600, #f8f7f5);
   animation: changeGradientOrigin 2s infinite ease-in-out;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
+    0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
+    0 0 16px hsl(0deg 0% 0% / 0.075);
+  transform-origin: -120% 80%;
 }

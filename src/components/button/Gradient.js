@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 
-const GradientAnimation = () => {
+const GradientBtn = ({ label }) => {
   const controls = useAnimation();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const GradientAnimation = () => {
 
   return (
     <motion.div
-      className="py-[3px] px-[3px] rounded-full border border-[#dbdada] bg-transparent"
+      className=" w-fit py-[3px] px-[3px] rounded-full border border-[#dbdada] bg-transparent"
       initial={{
         background:
           "radial-gradient(circle at 50% 0%, #ff6600, #f8f7f5,#f8f7f5)",
@@ -33,10 +33,10 @@ const GradientAnimation = () => {
     >
       {/* Content goes here */}
       <button class=" text-white font-bold py-1 px-10 rounded-3xl bg-primary">
-        Click me
+        {label}
       </button>
     </motion.div>
   );
 };
 
-export default GradientAnimation;
+export default GradientBtn;

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import { BsCameraVideoFill } from "react-icons/bs";
 
 const Application = ({ data }) => {
   return (
@@ -11,16 +12,23 @@ const Application = ({ data }) => {
       <section className="px-container flex flex-col items-center pb-[4rem]">
         {/* <p className="mt-1 mb-10">Steps to apply internship</p> */}
         <table className="max-w-[31rem]">
-          <tbody>
+          <tbody className="p-0 m-0">
             {data?.map((internData, idx) => {
               return (
-                <tr key={idx}>
+                <tr key={idx} className="p-0 m-0">
                   <td className="font-medium uppercase pr-5 border-r whitespace-nowrap">
-                    {internData.step}
+                    <span className="flex items-end gap-2">
+                      <BsCameraVideoFill className=" text-primary text-lg animate-slow-bounce " />
+                      {internData.step}
+                    </span>
                   </td>
-                  <td className="font-medium text-lg pl-5 pb-5">
+                  <td
+                    className={`font-semibold text-lg pl-5 text-primary ${
+                      idx !== data.length - 1 ? "pb-5" : ""
+                    }`}
+                  >
                     {internData.title}
-                    <span className="font-normal block text-sm">
+                    <span className="font-normal block text-sm text-[#232323]">
                       {internData.details}
                     </span>
                   </td>
