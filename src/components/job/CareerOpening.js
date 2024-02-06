@@ -8,7 +8,7 @@ const OpeningCard = () => {
   return (
     <Link
       to="/page"
-      className="flex justify-between p-2 items-center border-b hover:bg-red-50"
+      className="flex justify-between p-2 items-center border-b hover:bg-[#f7f8fb]"
     >
       <div className="flex gap-2 items-center">
         <FaStore className="text-xl text-primary" />
@@ -26,7 +26,7 @@ const OpeningCard = () => {
 
 const Opening = () => {
   return (
-    <div className="px-container pt-top pb-10">
+    <div className="px-2 md:px-4 xl:px-container pt-top pb-10">
       <Header
         title="Curront openings"
         subTitle="Do you think you are a good fit? Apply now. We would love to meet you."

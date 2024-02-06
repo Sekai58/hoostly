@@ -6,15 +6,19 @@ import HeroSection from "../components/job/HeroSection";
 import { careerBenefits } from "../assets/data/benefitsData";
 import { careerApplicationData } from "../assets/data/applicationData";
 import { careerHeroData } from "../assets/data/heroData";
+import Intro from "../components/job/CareerIntro";
+import ImageSlider from "../components/job/Slider";
 
 const Career = () => {
   return (
     <div>
       <HeroSection data={careerHeroData} />
-      <Values />
+      <Intro />
       <Application data={careerApplicationData} />
       <Benefits data={careerBenefits} />
       <Opening />
+      <Values />
+      <ImageSlider />
     </div>
   );
 };

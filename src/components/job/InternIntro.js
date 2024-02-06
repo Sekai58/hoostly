@@ -3,7 +3,7 @@ import Images from "./Images";
 
 const Intro = () => {
   return (
-    <section className="px-container bg-[#f7f8fb]  grid grid-cols-2 gap-10">
+    <section className="px-2 md:px-4 xl:px-container bg-[#f7f8fb]  grid grid-cols-1 md:grid-cols-2 gap-10">
       <div className="w-full flex flex-col items-center">
         <Images />
       </div>

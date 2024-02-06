@@ -27,7 +27,7 @@ const Faq = ({ data }) => {
         title="Frequently asked Questions "
         subTitle="No more burning questions, just burning excitement to join our team."
       />
-      <section className="px-container pt-[2rem] pb-[4rem]">
+      <section className="px-2 md:px-4 xl:px-container pt-[2rem] pb-[4rem]">
         <Accordion allowZeroExpanded>
           {data?.map((faq, idx) => {
             return (

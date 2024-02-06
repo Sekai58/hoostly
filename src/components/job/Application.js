@@ -9,8 +9,7 @@ const Application = ({ data }) => {
         title="Your Application Journey"
         subTitle="Steps to apply internship"
       />
-      <section className="px-container flex flex-col items-center pb-[4rem]">
-        {/* <p className="mt-1 mb-10">Steps to apply internship</p> */}
+      <section className="px-2 md:px-4 xl:px-container flex flex-col items-center pb-[4rem]">
         <table className="max-w-[31rem]">
           <tbody className="p-0 m-0">
             {data?.map((internData, idx) => {

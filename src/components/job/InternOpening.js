@@ -10,7 +10,7 @@ const Opening = () => {
         title="Current Openings"
         subTitle="We offer paid internships with three intakes per year. We have a limited number of positions open each year, so apply early!"
       />
-      <section className="px-container pb-10">
+      <section className="px-2 md:px-4 xl:px-container pb-10">
         <div className="flex flex-col items-center gap-5 mb-10">
           <FaWindowRestore className="text-xl text-primary" />
           <p className="font-medium text-lg">
