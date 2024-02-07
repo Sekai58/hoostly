@@ -4,7 +4,6 @@ import Intro from "../components/job/InternIntro";
 import Benefits from "../components/job/Benefits";
 import Faq from "../components/job/Faq";
 import Opening from "../components/job/InternOpening";
-import Novice from "../components/job/Novice";
 import Application from "../components/job/Application";
 import { internApplicationData } from "../assets/data/applicationData";
 import { faqData } from "../assets/data/faqData";
@@ -18,7 +17,6 @@ const Internship = () => {
       <Intro />
       <Application data={internApplicationData} />
       <Benefits data={internBenefits} />
-      <Novice />
       <Opening />
       <Faq data={faqData} />
     </>

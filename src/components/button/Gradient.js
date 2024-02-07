@@ -32,7 +32,7 @@ const GradientBtn = ({ label }) => {
       animate={controls}
     >
       {/* Content goes here */}
-      <button className=" text-white font-bold py-1 px-10 rounded-3xl bg-primary">
+      <button className=" text-white font-bold py-[1px] px-[4px] rounded-3xl bg-primary">
         {label}
       </button>
     </motion.div>

@@ -4,6 +4,7 @@ import Navbar from "./components/nav/Navbar";
 import Home from "./pages/Home";
 import Internship from "./pages/Internship";
 import Career from "./pages/Career";
+import JobApply from "./pages/JobApply";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/page" element={<Internship />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/opening/:id" element={<JobApply />} />
           </Routes>
         </BrowserRouter>
       </main>

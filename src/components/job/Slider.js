@@ -9,31 +9,31 @@ var settings = {
   dots: true,
   // centerMode: true,
   infinite: true,
-  slidesToShow: 3,
+  slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   speed: 200,
   cssEase: "linear",
   arrows: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        // initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // arrows: false,
-        // centerMode: true,
-      },
-    },
-  ],
+  // responsive: [
+  //   {
+  //     breakpoint: 1024,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       // initialSlide: 2,
+  //     },
+  //   },
+  //   {
+  //     breakpoint: 600,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       // arrows: false,
+  //       // centerMode: true,
+  //     },
+  //   },
+  // ],
 };
 
 const ImageSlider = () => {
@@ -49,7 +49,7 @@ const ImageSlider = () => {
               <Link to="#">
                 <img
                   src="https://faradayshielding.com.au/wp-content/uploads/2021/05/Image_039.jpg"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover bg-cover"
                   alt="gallery"
                 />
                 <div

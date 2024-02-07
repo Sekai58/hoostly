@@ -3,6 +3,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import pageSlice from "./features/pageSlice";
 import hamburgerSlice from "./features/hamburgerSlice";
+import navbarSlice from "./features/navbarSlice";
 // import hamburgerSlice from "./features/hamburgerSlice";
 // import { apiSlice } from "./features/apiSlice";
 // import userSlice from "./features/userSlice";
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   //   [apiSlice.reducerPath]: apiSlice.reducer,
   page: pageSlice,
   hamburger: hamburgerSlice,
+  navbar: navbarSlice,
   //   form: multiStepFormSlice,
   //   user: userSlice,
 });

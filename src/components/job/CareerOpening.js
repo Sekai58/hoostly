@@ -1,23 +1,33 @@
-import React from "react";
-import { FaStore } from "react-icons/fa";
+import React, { useEffect } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Header from "./Header";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { openingData } from "../../assets/data/openingData";
 
-const OpeningCard = () => {
+const OpeningCard = ({ job }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <Link
-      to="/page"
-      className="flex justify-between p-2 items-center border-b hover:bg-[#f7f8fb]"
+      to={`/opening/${job.path}`}
+      data-aos="fade-up"
+      className="flex justify-between p-2 items-center border-b hover:bg-backgroundTransSecondary"
     >
       <div className="flex gap-2 items-center">
-        <FaStore className="text-xl text-primary" />
+        {job.icon}
         <p>
-          <h4>Magneto Developer</h4>
-          <span className="block">Pune,India</span>
+          <span className="font-medium">{job.title}</span>
+          <span className="block">{job.location}</span>
         </p>
       </div>
-      <button className="flex items-center font-medium text-primary  gap-2">
+      <button className="flex items-center font-medium text-gradientStart  gap-2">
         Apply NOW <IoIosArrowRoundForward className="text-3xl" />
       </button>
     </Link>
@@ -31,10 +41,9 @@ const Opening = () => {
         title="Curront openings"
         subTitle="Do you think you are a good fit? Apply now. We would love to meet you."
       />
-      <OpeningCard />
-      <OpeningCard />
-      <OpeningCard />
-      <OpeningCard />
+      {openingData.map((job, idx) => {
+        return <OpeningCard key={idx} job={job} />;
+      })}
     </div>
   );
 };

@@ -16,9 +16,23 @@ module.exports = {
       colors: {
         // primary: "#008e44",
         // primary: "#3086e0",
-        primary: "#00bf8f",
+        // primary: "#2092F1",
+        // primary: "#00bf8f",
+        primary: "#008E44",
+        backgroundSecondary: "#D2FBD0",
+        // backgroundTransSecondary: "#d2fbd04f",#EFF6FF
+        bgSecondary: "#eff6ff78",
+        backgroundTransSecondary: "#f1fef0",
+
         startfrom: "#001510",
         endto: "#00bf8f",
+        gradientStart: "#001510",
+        gradientMiddle: "",
+        gradientEnd: "#008e44",
+
+        textLight: "#4a4a4a",
+
+        grayLine: "#a1a1a1",
         gray: "#3E4652",
         success: "#009C2C",
         errorColor: "#d63031",

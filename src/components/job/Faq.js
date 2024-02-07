@@ -22,7 +22,7 @@ const Faq = ({ data }) => {
   };
 
   return (
-    <div className="bg-[#f7f8fb]">
+    <div className="bg-bgSecondary">
       <Header
         title="Frequently asked Questions "
         subTitle="No more burning questions, just burning excitement to join our team."
@@ -42,7 +42,7 @@ const Faq = ({ data }) => {
               >
                 <AccordionItem
                   key={idx}
-                  className="my-5 border border-[#838383] p-2 px-5 rounded-md bg-white"
+                  className="my-5 border border-grayLine p-2 px-5 rounded-2xl bg-white"
                 >
                   <AccordionItemHeading
                     onClick={() => handleExpandedIndex(idx)}

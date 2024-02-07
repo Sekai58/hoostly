@@ -1,10 +1,12 @@
-import React from "react";
+// import React from "react";
 import Header from "./Header";
 import { BsCameraVideoFill } from "react-icons/bs";
+import AosInitializer from "../AosInitializer/AosInitializer";
 
 const Application = ({ data }) => {
   return (
     <>
+      <AosInitializer />
       <Header
         title="Your Application Journey"
         subTitle="Steps to apply internship"
@@ -15,19 +17,19 @@ const Application = ({ data }) => {
             {data?.map((internData, idx) => {
               return (
                 <tr key={idx} className="p-0 m-0">
-                  <td className="font-medium uppercase pr-5 border-r whitespace-nowrap">
-                    <span className="flex items-end gap-2">
-                      <BsCameraVideoFill className=" text-primary text-lg animate-slow-bounce " />
+                  <td className="uppercase pr-5 border-r whitespace-nowrap text-gradientStart font-bold text-xl align-top">
+                    <span className="flex items-center gap-2">
+                      <BsCameraVideoFill className=" text-primary text-lg" />
                       {internData.step}
                     </span>
                   </td>
                   <td
-                    className={`font-semibold text-lg pl-5 text-primary ${
+                    className={`font-bold text-2xl pl-5 text-gradientStart ${
                       idx !== data.length - 1 ? "pb-5" : ""
                     }`}
                   >
                     {internData.title}
-                    <span className="font-normal block text-sm text-[#232323]">
+                    <span className="font-normal block text-base text-textLight">
                       {internData.details}
                     </span>
                   </td>

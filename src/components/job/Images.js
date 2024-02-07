@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const cardVariants = {
   offscreen: {
@@ -19,17 +20,21 @@ const hue = (h) => `hsl(${h}, 100%, 50%)`;
 
 const Card = ({ emoji, hueA, hueB }) => {
   const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
+  const [ref, inView] = useInView();
 
   return (
     <motion.div
       className="card-container"
-      initial="offscreen"
-      whileInView="onscreen"
+      // initial="offscreen"
+      // whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
     >
       <div className="splash" style={{ background }} />
       <motion.div
-        className="w-[250px] h-[250px] flex justify-center items-center bg-white text-8xl hover:text-9xl card"
+        ref={ref}
+        className="w-[250px] h-[250px] flex justify-center items-center bg-white text-8xl hover:text-9xl hover:rotate-12 card"
+        animate={inView ? "onscreen" : "offscreen"}
+        exit="offscreen"
         variants={cardVariants}
       >
         {emoji}

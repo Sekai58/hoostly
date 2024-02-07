@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import { RiPhoneLine } from "react-icons/ri";
+// import { GoHome } from "react-icons/go";
+
 import {
   hamburgerClose,
   // hamburgerClose,
@@ -73,82 +75,88 @@ const HambergerMenu = () => {
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`fixed top-0 right-0 w-[100%] z-10 bg-gray-50 border-[#d7d7d7] h-[100dvh] sm:px-8 overflow-y-scroll no-scrollbar bg-white `}
+          className={`fixed top-0 right-0 w-[100%] z-10 bg-gray-50 border-grayLine border-box h-screen sm:px-8 overflow-y-scroll no-scrollbar bg-white flex flex-col justify-between `}
         >
-          <button
-            className="flex w-full justify-start py-3 text-3xl px-2"
-            onClick={() => dispatch(hamburgerClose())}
-          >
-            <IoMdClose className={`${isOpened ? "" : "hidden"}`} />
-          </button>
-          <div className="mt-3 mb-5 px-2 md:px-4">
-            <p className="flex items-center gap-[2px]">
-              <RiPhoneLine className="text-lg" />
-              <span className="block text-xl font-bold">982-2799-880</span>
-              <img
-                src="https://www.flagcolorcodes.com/data/Flag-of-Nepal.png"
-                className="h-4"
-                alt="nepal flag"
-              />
-            </p>
-            <p className="ml-5 text-sm -translate-y-2">(10am to 5pm suport)</p>
-          </div>
+          <div>
+            <button
+              className="flex w-full justify-start py-3 text-3xl px-2"
+              onClick={() => dispatch(hamburgerClose())}
+            >
+              <IoMdClose className={`${isOpened ? "" : "hidden"}`} />
+            </button>
+            <div className="mt-3 mb-5 px-2 md:px-4">
+              <p className="flex items-center gap-[2px]">
+                <RiPhoneLine className="text-lg" />
+                <span className="block text-xl font-bold text-primary">
+                  982-2799-880
+                </span>
+                <img
+                  src="https://www.flagcolorcodes.com/data/Flag-of-Nepal.png"
+                  className="h-4"
+                  alt="nepal flag"
+                />
+              </p>
+              <p className="ml-5 text-sm -translate-y-2">
+                (10am to 5pm suport)
+              </p>
+            </div>
 
-          <Accordion allowZeroExpanded>
-            {navDatas?.map((navData, idx) => {
-              return (
-                <motion.div
-                  key={idx}
-                  onClick={() => {
-                    handleMegaMenu(navData.navTitle, navData.menuData);
-                  }}
-                >
-                  <AccordionItem
+            <Accordion allowZeroExpanded>
+              {navDatas?.map((navData, idx) => {
+                return (
+                  <motion.div
                     key={idx}
-                    className="border-b border-[#838383] p-2 px-5 bg-white"
+                    onClick={() => {
+                      handleMegaMenu(navData.navTitle, navData.menuData);
+                    }}
                   >
-                    <AccordionItemHeading
-                      onClick={() => handleExpandedIndex(idx)}
+                    <AccordionItem
+                      key={idx}
+                      className="border-b border-grayLine p-2 px-5 bg-white"
                     >
-                      <AccordionItemButton className="py-2 flex justify-between font-semibold">
-                        <span
-                          className={`${
-                            expandedIndex === idx ? "text-primary" : ""
-                          }`}
-                        >
-                          {navData.navTitle}
-                        </span>
-                        <motion.div>
-                          <MdKeyboardArrowUp
+                      <AccordionItemHeading
+                        onClick={() => handleExpandedIndex(idx)}
+                      >
+                        <AccordionItemButton className="py-2 flex justify-between font-semibold">
+                          <span
                             className={`${
-                              showMegaMenu &&
-                              navData.navTitle === menuData.navTitle
-                                ? "transform rotate-0 transition-transform duration-400 ease-in-out"
-                                : "transform rotate-180 transition-transform duration-400 ease-in-out"
+                              expandedIndex === idx ? "text-primary" : ""
                             }`}
+                          >
+                            {navData.navTitle}
+                          </span>
+                          <motion.div>
+                            <MdKeyboardArrowUp
+                              className={`${
+                                showMegaMenu &&
+                                navData.navTitle === menuData.navTitle
+                                  ? "transform rotate-0 transition-transform duration-400 ease-in-out"
+                                  : "transform rotate-180 transition-transform duration-400 ease-in-out"
+                              }`}
+                            />
+                          </motion.div>
+                        </AccordionItemButton>
+                      </AccordionItemHeading>
+                      <AccordionItemPanel className="pr-5">
+                        <motion.div
+                          key={menuData.navTitle}
+                          initial={{ x: -100 }}
+                          animate={{ x: 0 }}
+                          exit={{ x: 100 }}
+                          transition={{ duration: 0.1 }}
+                        >
+                          <MegaDropDown
+                            navTitle={menuData.navTitle}
+                            menuData={menuData.menuContent}
                           />
                         </motion.div>
-                      </AccordionItemButton>
-                    </AccordionItemHeading>
-                    <AccordionItemPanel className="pr-5">
-                      <motion.div
-                        key={menuData.navTitle}
-                        initial={{ x: -100 }}
-                        animate={{ x: 0 }}
-                        exit={{ x: 100 }}
-                        transition={{ duration: 0.1 }}
-                      >
-                        <MegaDropDown
-                          navTitle={menuData.navTitle}
-                          menuData={menuData.menuContent}
-                        />
-                      </motion.div>
-                    </AccordionItemPanel>
-                  </AccordionItem>
-                </motion.div>
-              );
-            })}
-          </Accordion>
+                      </AccordionItemPanel>
+                    </AccordionItem>
+                  </motion.div>
+                );
+              })}
+            </Accordion>
+          </div>
         </motion.div>
       ) : (
         <></>

@@ -14,7 +14,6 @@ const hamburgerSlice = createSlice({
   },
 });
 
-export const { gethamburgerState, hamburgerToggle, hamburgerClose } =
-  hamburgerSlice.actions;
+export const { hamburgerToggle, hamburgerClose } = hamburgerSlice.actions;
 
 export default hamburgerSlice.reducer;

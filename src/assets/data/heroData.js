@@ -1,6 +1,6 @@
 export const careerHeroData = {
   title: "Jumpstart your career with us!",
-  subTitle: "CAREER AT HOOSTLY",
+  subTitle: "Career at Hoostly",
   image: "https://www.imagelighteditor.com/img/bg-after.jpg",
   btn: "View job openings",
   description:
@@ -9,7 +9,7 @@ export const careerHeroData = {
 
 export const internHeroData = {
   title: "Jumpstart your career with us!",
-  subTitle: "INTERNSHIP AT HOOSTLY",
+  subTitle: "Internship at Hoostly",
   image: "https://www.imagelighteditor.com/img/bg-after.jpg",
   btn: "View internship",
   description:

@@ -8,17 +8,20 @@ import { careerApplicationData } from "../assets/data/applicationData";
 import { careerHeroData } from "../assets/data/heroData";
 import Intro from "../components/job/CareerIntro";
 import ImageSlider from "../components/job/Slider";
+import Faq from "../components/job/Faq";
+import { faqData } from "../assets/data/faqData";
 
 const Career = () => {
   return (
     <div>
       <HeroSection data={careerHeroData} />
       <Intro />
-      <Application data={careerApplicationData} />
+      <Values />
       <Benefits data={careerBenefits} />
       <Opening />
-      <Values />
+      <Application data={careerApplicationData} />
       <ImageSlider />
+      <Faq data={faqData} />
     </div>
   );
 };

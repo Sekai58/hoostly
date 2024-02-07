@@ -1,9 +1,12 @@
 import { FiPhone } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import FeaturedCard from "../cards/FeaturedCard";
+import { useDispatch } from "react-redux";
+import { navbarClose } from "../../redux/features/navbarSlice";
 // import { motion } from "framer-motion";
 
 const MegaDropDown = ({ navTitle, menuData }) => {
+  const dispatch = useDispatch();
   return (
     <div
     // className="fixed z-[99] top-[4rem] xl:top-[4.5rem] w-full  bg-white border-[#c0c0c0] border-t flex flex-col justify-between max-h-[calc(100dvh-4.5rem)] overflow-y-scroll"
@@ -18,14 +21,17 @@ const MegaDropDown = ({ navTitle, menuData }) => {
           {menuData.map((col, idx) => {
             return (
               <div key={idx}>
-                <h3 className="font-bold  py-2 border-[#c0c0c0] border-b mb-3">
+                <h3 className="font-bold  py-2 border-grayLine border-b mb-3">
                   {col.subTitle}
                 </h3>
                 {col.links.map((link, idx) => {
                   return (
-                    <Link to="/page" key={idx}>
+                    <Link to="/career" key={idx}>
                       <p className="py-3">
-                        <span className="p-1 rounded-md hover:bg-blue-100">
+                        <span
+                          className="p-1 rounded-md hover:bg-blue-50"
+                          onClick={() => dispatch(navbarClose())}
+                        >
                           {link}
                         </span>
                       </p>
@@ -36,7 +42,7 @@ const MegaDropDown = ({ navTitle, menuData }) => {
             );
           })}
         </div>
-        <div className="bg-[#d1f3fc38] flex flex-col items-stretch pr-container pt-6 pb-4 pl-4">
+        <div className="bg-[#d1f3fc38] flex flex-col items-stretch xl:pr-container pt-6 pb-4 xl:pl-4">
           <FeaturedCard />
           <br />
           <FeaturedCard />

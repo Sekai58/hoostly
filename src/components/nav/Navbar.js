@@ -9,6 +9,9 @@ import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import GradientBtn from "../button/Gradient";
 import HambergerMenu from "./HamburgerMenu";
+import { useDispatch, useSelector } from "react-redux";
+import { navbarClose, navbarOpen } from "../../redux/features/navbarSlice";
+import { GoHome } from "react-icons/go";
 
 const Navbar = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(null);
@@ -16,10 +19,15 @@ const Navbar = () => {
   const [menuData, setMenuData] = useState({ navTitle: "", menuContent: [] });
 
   const location = useLocation();
+  const dispatch = useDispatch();
+
+  const navbar = useSelector((state) => {
+    return state.navbar.value;
+  });
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 10) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -36,8 +44,10 @@ const Navbar = () => {
     if (showMegaMenu !== title?.toLowerCase()) {
       setShowMegaMenu(title?.toLowerCase());
       setMenuData({ navTitle: title, menuContent: content });
+      dispatch(navbarOpen());
     } else {
       setShowMegaMenu(null);
+      dispatch(navbarClose());
     }
   };
 
@@ -48,12 +58,12 @@ const Navbar = () => {
           showMegaMenu
             ? "bg-white"
             : `${scrolled ? "bg-white shadow-lg" : "bg-transparent"}`
-        } flex justify-between items-center px-2 md:px-4  xl:px-container py-3`}
+        } hidden sm:flex justify-between items-center px-2 md:px-4  xl:px-container py-3`}
       >
+        <p className="flex items-center h-10 text-xl lg:text-2xl font-bold  text-primary">
+          Hoostly
+        </p>
         <ul className="hidden xl:flex gap-4 items-center">
-          {/* <li className="py-2">
-            <img src="/logo.png" className="h-10" />
-          </li> */}
           {navDatas.map((navData, idx) => {
             return (
               <li
@@ -73,7 +83,9 @@ const Navbar = () => {
                 <motion.div>
                   <MdKeyboardArrowUp
                     className={`${
-                      showMegaMenu && navData.navTitle === menuData.navTitle
+                      navbar &&
+                      showMegaMenu &&
+                      navData.navTitle === menuData.navTitle
                         ? "transform rotate-0 transition-transform duration-400 ease-in-out"
                         : "transform rotate-180 transition-transform duration-400 ease-in-out"
                     }`}
@@ -92,7 +104,7 @@ const Navbar = () => {
       </nav>
 
       {/* MEGA MENU TO SHOW */}
-      {showMegaMenu ? (
+      {showMegaMenu && navbar ? (
         <motion.div
           className="hidden fixed z-[99] top-[4rem] xl:top-[4.5rem] w-full  bg-white border-[#c0c0c0] border-t xl:flex flex-col justify-between max-h-[calc(100dvh-4.5rem)] overflow-y-scroll"
           key={menuData.navTitle}
@@ -107,6 +119,30 @@ const Navbar = () => {
           />
         </motion.div>
       ) : null}
+
+      <div className=" fixed bottom-0 z-[999] w-full sm:hidden bg-backgroundTransSecondary text-[#494949] flex justify-evenly items-center rounded-t-xl">
+        <div className="flex flex-col items-center">
+          <GoHome />
+          <p className="text-[0.7rem]">Home</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <GoHome />
+          <p className="text-[0.7rem]">Home</p>
+        </div>
+        <div className="rounded-full bg-backgroundTransSecondary flex items-center justify-center -translate-y-5 p-1">
+          <div className="rounded-full bg-[#008e459d] p-1">
+            <GoHome className="w-10 h-10 p-[11px] bg-primary rounded-full text-white font-bold" />
+          </div>
+        </div>
+        <div className="flex flex-col items-center">
+          <GoHome />
+          <p className="text-[0.7rem]">Home</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <GoHome />
+          <p className="text-[0.7rem]">Home</p>
+        </div>
+      </div>
     </>
   );
 };

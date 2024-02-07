@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const BenefitCard = ({ icon, title, content }) => {
+const BenefitCard = ({ icon, title, content, delay }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
-    <div className="flex flex-col gap-5">
+    <div data-aos="fade-down" className="flex flex-col gap-5 max-w-[16rem] ">
       <div className=""></div>
       {icon}
-      <p className="font-medium text-xl">{title}</p>
-      <p>{content}</p>
+      <p className="font-bold text-2xl">{title}</p>
+      <p className="text-base text-textLight">{content}</p>
     </div>
   );
 };
 
 const Benefits = ({ data }) => {
   return (
-    <div className="bg-[#f7f8fb]">
+    <div className="bg-bgSecondary">
       <Header
         title="All work and all play"
         subTitle="We provide more than a learning experience at Leapfrog. Our
@@ -22,7 +31,7 @@ const Benefits = ({ data }) => {
           experience the Leapfrog difference first-hand."
       />
       <section className="px-2 md:px-4 xl:px-container flex flex-col items-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-10 gap-16">
+        <div className="flex flex-wrap items-center justify-center py-10 gap-5 md:gap-12 ">
           {data?.map((item, idx) => {
             return (
               <BenefitCard
@@ -30,6 +39,7 @@ const Benefits = ({ data }) => {
                 icon={item.icon}
                 title={item.title}
                 content={item.content}
+                delay={idx * 0.5}
               />
             );
           })}
