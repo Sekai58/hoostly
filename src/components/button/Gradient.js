@@ -24,7 +24,7 @@ const GradientBtn = ({ label }) => {
 
   return (
     <motion.div
-      className=" w-fit py-[3px] px-[3px] rounded-full border border-[#dbdada] bg-transparent"
+      className=" w-fit py-[1px] px-[1px] rounded-full border border-[#dbdada] bg-transparent"
       initial={{
         background:
           "radial-gradient(circle at 50% 0%, #ff6600, #f8f7f5,#f8f7f5)",
@@ -32,7 +32,7 @@ const GradientBtn = ({ label }) => {
       animate={controls}
     >
       {/* Content goes here */}
-      <button class=" text-white font-bold py-1 px-10 rounded-3xl bg-primary">
+      <button className=" text-white font-bold py-1 px-10 rounded-3xl bg-primary">
         {label}
       </button>
     </motion.div>

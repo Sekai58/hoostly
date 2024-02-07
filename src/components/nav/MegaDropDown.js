@@ -1,20 +1,20 @@
 import { FiPhone } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import FeaturedCard from "../cards/FeaturedCard";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const MegaDropDown = ({ navTitle, menuData }) => {
   return (
-    <motion.div
-      className="fixed z-[99] top-[4rem] xl:top-[4.5rem] w-full  bg-white border-[#c0c0c0] border-t flex flex-col justify-between max-h-[calc(100dvh-4.5rem)] overflow-y-scroll"
-      key={navTitle}
-      initial={{ x: -100 }}
-      animate={{ x: 0 }}
-      exit={{ x: 100 }}
-      transition={{ duration: 0.1 }}
+    <div
+    // className="fixed z-[99] top-[4rem] xl:top-[4.5rem] w-full  bg-white border-[#c0c0c0] border-t flex flex-col justify-between max-h-[calc(100dvh-4.5rem)] overflow-y-scroll"
+    // key={navTitle}
+    // initial={{ x: -100 }}
+    // animate={{ x: 0 }}
+    // exit={{ x: 100 }}
+    // transition={{ duration: 0.1 }}
     >
       <section className="flex flex-col xl:flex-row justify-between h-full">
-        <div className="px-container w-[88%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-4">
+        <div className="px-2 md:px-4 xl:px-container w-[88%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-4">
           {menuData.map((col, idx) => {
             return (
               <div key={idx}>
@@ -24,7 +24,11 @@ const MegaDropDown = ({ navTitle, menuData }) => {
                 {col.links.map((link, idx) => {
                   return (
                     <Link to="/page" key={idx}>
-                      <p className="py-3">{link}</p>
+                      <p className="py-3">
+                        <span className="p-1 rounded-md hover:bg-blue-100">
+                          {link}
+                        </span>
+                      </p>
                     </Link>
                   );
                 })}
@@ -57,7 +61,7 @@ const MegaDropDown = ({ navTitle, menuData }) => {
           Gwarko,Lalitpur,Nepal
         </button>
       </footer>
-    </motion.div>
+    </div>
   );
 };
 

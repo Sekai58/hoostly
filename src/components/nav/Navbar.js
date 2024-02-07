@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 // import Example from "../button/BorderAnimate";
 import { useLocation } from "react-router-dom";
 import GradientBtn from "../button/Gradient";
+import HambergerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(null);
@@ -46,8 +47,8 @@ const Navbar = () => {
         className={`fixed z-[99]  w-full ${
           showMegaMenu
             ? "bg-white"
-            : `${scrolled ? "bg-white border-b" : "bg-transparent"}`
-        } flex justify-between items-center px-container py-3`}
+            : `${scrolled ? "bg-white shadow-lg" : "bg-transparent"}`
+        } flex justify-between items-center px-2 md:px-4  xl:px-container py-3`}
       >
         <ul className="hidden xl:flex gap-4 items-center">
           {/* <li className="py-2">
@@ -82,17 +83,29 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <div className="flex gap-4 h-fit">
+        <div className="hidden xl:flex gap-4 h-fit">
           <GradientBtn label="Get in touch" />
+        </div>
+        <div className="w-full flex xl:hidden justify-end">
+          <HambergerMenu />
         </div>
       </nav>
 
       {/* MEGA MENU TO SHOW */}
       {showMegaMenu ? (
-        <MegaDropDown
-          navTitle={menuData.navTitle}
-          menuData={menuData.menuContent}
-        />
+        <motion.div
+          className="hidden fixed z-[99] top-[4rem] xl:top-[4.5rem] w-full  bg-white border-[#c0c0c0] border-t xl:flex flex-col justify-between max-h-[calc(100dvh-4.5rem)] overflow-y-scroll"
+          key={menuData.navTitle}
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          exit={{ x: 100 }}
+          transition={{ duration: 0.1 }}
+        >
+          <MegaDropDown
+            navTitle={menuData.navTitle}
+            menuData={menuData.menuContent}
+          />
+        </motion.div>
       ) : null}
     </>
   );

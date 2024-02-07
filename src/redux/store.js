@@ -2,6 +2,8 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import pageSlice from "./features/pageSlice";
+import hamburgerSlice from "./features/hamburgerSlice";
+// import hamburgerSlice from "./features/hamburgerSlice";
 // import { apiSlice } from "./features/apiSlice";
 // import userSlice from "./features/userSlice";
 // import multiStepFormSlice from "./features/multiStepFormSlice";
@@ -9,6 +11,7 @@ import pageSlice from "./features/pageSlice";
 const rootReducer = combineReducers({
   //   [apiSlice.reducerPath]: apiSlice.reducer,
   page: pageSlice,
+  hamburger: hamburgerSlice,
   //   form: multiStepFormSlice,
   //   user: userSlice,
 });
@@ -24,10 +27,10 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
-  //   middleware: (getDefaultMiddleware) =>
-  //     getDefaultMiddleware({
-  //       serializableCheck: false,
-  //     }).concat(apiSlice.middleware),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
   devTools: true,
 });
 
