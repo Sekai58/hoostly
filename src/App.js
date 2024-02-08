@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Internship from "./pages/Internship";
 import Career from "./pages/Career";
 import JobApply from "./pages/JobApply";
+import ContactForm from "./components/form/ContactForm";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/page" element={<Internship />} />
             <Route path="/career" element={<Career />} />
             <Route path="/opening/:id" element={<JobApply />} />
+            <Route path="/contact-us" element={<ContactForm />} />
           </Routes>
         </BrowserRouter>
       </main>

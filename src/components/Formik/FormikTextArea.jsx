@@ -6,6 +6,7 @@ const FormikTextArea = ({
   label,
   type,
   onChange,
+  className,
   required,
   ...props
 }) => {
@@ -15,12 +16,13 @@ const FormikTextArea = ({
         {({ field, meta }) => {
           return (
             <div>
-              <label htmlFor={name} className="block">
+              {/* <label htmlFor={name} className="block">
                 {label}{" "}
                 {required ? <span style={{ color: "red" }}>*</span> : null}
-              </label>
+              </label> */}
               <textarea
-                className="outline-none rounded-md border border-[#c3c3c3] focus:border-primary w-full min-h-[5rem] lg:min-h-[7rem] sm:w-[90%] md:w-[60%] xl:w-[50%] max-w-[32rem]"
+                className={`${className}`}
+                placeholder={label}
                 {...field}
                 {...props}
                 type={type}

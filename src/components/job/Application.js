@@ -1,12 +1,19 @@
 // import React from "react";
 import Header from "./Header";
 import { BsCameraVideoFill } from "react-icons/bs";
-import AosInitializer from "../AosInitializer/AosInitializer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Application = ({ data }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <>
-      <AosInitializer />
       <Header
         title="Your Application Journey"
         subTitle="Steps to apply internship"
@@ -17,13 +24,19 @@ const Application = ({ data }) => {
             {data?.map((internData, idx) => {
               return (
                 <tr key={idx} className="p-0 m-0">
-                  <td className="uppercase pr-5 border-r whitespace-nowrap text-gradientStart font-bold text-xl align-top">
+                  <td
+                    data-aos="zoom-in-right"
+                    data-aos-delay={(idx + 1) * 50}
+                    className="uppercase pr-5 border-r whitespace-nowrap text-gradientStart font-bold text-xl align-top"
+                  >
                     <span className="flex items-center gap-2">
                       <BsCameraVideoFill className=" text-primary text-lg" />
                       {internData.step}
                     </span>
                   </td>
                   <td
+                    data-aos="zoom-in-left"
+                    data-aos-delay={(idx + 1) * 50}
                     className={`font-bold text-2xl pl-5 text-gradientStart ${
                       idx !== data.length - 1 ? "pb-5" : ""
                     }`}

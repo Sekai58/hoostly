@@ -1,5 +1,8 @@
 import { IoIosArrowRoundForward } from "react-icons/io";
 import GradientBtn from "../button/Gradient";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function Image({ image }) {
   return (
@@ -16,6 +19,12 @@ function Image({ image }) {
 }
 
 const HeroSection = ({ data }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <div className=" pt-top mb-[8rem] flex flex-col">
       <section className="flex flex-col md:flex-row  gap-16 mt-10">
@@ -36,7 +45,7 @@ const HeroSection = ({ data }) => {
           </p>
         </div>
 
-        <div className="flex-1 flex justify-end">
+        <div data-aos="flip-right" className="flex-1 flex justify-end">
           <div className="bg bg-backgroundTransSecondary w-full h-[100px] sm:h-[150px] md:h-auto md:w-[80%] xl:w-[70%] relative">
             <Image image={data?.image} />
           </div>

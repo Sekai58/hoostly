@@ -12,7 +12,11 @@ const BenefitCard = ({ icon, title, content, delay }) => {
   }, []);
 
   return (
-    <div data-aos="fade-down" className="flex flex-col gap-5 max-w-[16rem] ">
+    <div
+      data-aos="fade-down-left"
+      data-aos-delay={delay}
+      className="flex flex-col gap-5 max-w-[16rem] "
+    >
       <div className=""></div>
       {icon}
       <p className="font-bold text-2xl">{title}</p>
@@ -39,7 +43,7 @@ const Benefits = ({ data }) => {
                 icon={item.icon}
                 title={item.title}
                 content={item.content}
-                delay={idx * 0.5}
+                delay={(idx + 1) * 100}
               />
             );
           })}

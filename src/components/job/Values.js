@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import { CiUnlock } from "react-icons/ci";
 import { valuesData } from "../../assets/data/valuesData";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const ValueCard = () => {
+const ValueCard = ({ delay }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
-    <div className="min-w-[18rem] flex flex-col items-center gap-5">
-      <CiUnlock className="text-3xl text-primary font-bold" />
-      <p className="text-center">Customer Focus</p>
-      <p className="text-center">Go the extra mile to make customers smile</p>
+    <div
+      data-aos="flip-right"
+      data-aos-delay={delay}
+      className="max-w-[16rem] flex flex-col items-center gap-2"
+    >
+      <CiUnlock className="text-6xl text-primary font-bold mb-6 bg-blue-100 rounded-full p-1" />
+      <p className="text-center font-bold text-2xl">Customer Focus</p>
+      <p className="text-center text-textLight">
+        Go the extra mile to make customers smile
+      </p>
     </div>
   );
 };
@@ -23,7 +37,7 @@ const Values = () => {
       <section className="w-full flex justify-center">
         <div className="px-2 md:px-4 xl:px-container flex flex-wrap  gap-10 items-center justify-center ">
           {valuesData.map((value, idx) => {
-            return <ValueCard key={idx} />;
+            return <ValueCard key={idx} delay={idx * 100} />;
           })}
         </div>
       </section>

@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { openingData } from "../../assets/data/openingData";
 
-const OpeningCard = ({ job }) => {
+const OpeningCard = ({ job, delay }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -18,7 +18,8 @@ const OpeningCard = ({ job }) => {
     <Link
       to={`/opening/${job.path}`}
       data-aos="fade-up"
-      className="flex justify-between p-2 items-center border-b hover:bg-backgroundTransSecondary"
+      data-aos-delay={delay}
+      className="flex justify-between p-2 items-center border-b border-grayLine hover:bg-backgroundTransSecondary"
     >
       <div className="flex gap-2 items-center">
         {job.icon}
@@ -42,7 +43,7 @@ const Opening = () => {
         subTitle="Do you think you are a good fit? Apply now. We would love to meet you."
       />
       {openingData.map((job, idx) => {
-        return <OpeningCard key={idx} job={job} />;
+        return <OpeningCard key={idx} job={job} delay={idx * 150} />;
       })}
     </div>
   );
