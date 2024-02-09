@@ -36,7 +36,7 @@ module.exports = {
         textLight: "#4a4a4a",
 
         grayLine: "#a1a1a1",
-        gray: "#3E4652",
+        lightGray: "#cbcbcb",
         success: "#009C2C",
         errorColor: "#d63031",
         white: "#ffffff",

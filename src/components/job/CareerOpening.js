@@ -19,7 +19,7 @@ const OpeningCard = ({ job, delay }) => {
       to={`/opening/${job.path}`}
       data-aos="fade-up"
       data-aos-delay={delay}
-      className="flex justify-between p-2 items-center border-b border-grayLine hover:bg-backgroundTransSecondary"
+      className="flex justify-between p-2 items-center border-b border-lightGray hover:bg-backgroundTransSecondary"
     >
       <div className="flex gap-2 items-center">
         {job.icon}

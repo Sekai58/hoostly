@@ -19,6 +19,7 @@ function App() {
             <Route path="/career" element={<Career />} />
             <Route path="/opening/:id" element={<JobApply />} />
             <Route path="/contact-us" element={<ContactForm />} />
+            <Route path="/service" element={<ContactForm />} />
           </Routes>
         </BrowserRouter>
       </main>

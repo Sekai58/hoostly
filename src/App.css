@@ -48,3 +48,27 @@
     0 0 16px hsl(0deg 0% 0% / 0.075);
   transform-origin: -120% 80%;
 }
+
+.btnanimate {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  animation: border-top 3s infinite;
+}
+
+@keyframes border-top {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+
+  50% {
+    width: 100%;
+    height: 0px;
+  }
+  10% {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Images from "./Images";
 import IntroImages from "./IntroImages";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Intro = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <section className="px-2 md:px-4 xl:px-container bg-bgSecondary  grid grid-cols-1 lg:grid-cols-2 gap-10">
-      <div className="w-full flex flex-col items-center py-10">
+      <div
+        className="w-full flex flex-col items-center py-10"
+        data-aos="zoom-in"
+        delay={300}
+      >
         <IntroImages />
       </div>
       <aside className="py-10">

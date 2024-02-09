@@ -6,7 +6,7 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 // import AnimatedButton from "../button/AminatedButton";
 import { motion } from "framer-motion";
 // import Example from "../button/BorderAnimate";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import GradientBtn from "../button/Gradient";
 import HambergerMenu from "./HamburgerMenu";
 import { useDispatch, useSelector } from "react-redux";
@@ -54,15 +54,18 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed z-[99]  w-full ${
+        className={`fixed top-0 z-[99]  w-full ${
           showMegaMenu
             ? "bg-white"
             : `${scrolled ? "bg-white shadow-lg" : "bg-transparent"}`
         } hidden sm:flex justify-between items-center px-2 md:px-4  xl:px-container py-3`}
       >
-        <p className="flex items-center h-10 text-xl lg:text-2xl font-bold  text-primary">
+        <Link
+          to="/"
+          className="flex items-center h-10 text-xl lg:text-2xl font-bold  text-primary"
+        >
           Hoostly
-        </p>
+        </Link>
         <ul className="hidden xl:flex gap-4 items-center">
           {navDatas.map((navData, idx) => {
             return (
@@ -97,6 +100,7 @@ const Navbar = () => {
         </ul>
         <div className="hidden xl:flex gap-4 h-fit">
           <GradientBtn label="Get in touch" />
+          {/* <Border /> */}
         </div>
         <div className="w-full flex xl:hidden justify-end">
           <HambergerMenu />

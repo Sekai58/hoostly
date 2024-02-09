@@ -15,7 +15,7 @@ const FormikSelect = ({
         {({ field, meta }) => {
           return (
             <div>
-              <label htmlFor={name} className="block">
+              <label htmlFor={name} className=" text-grayLine">
                 {label}{" "}
                 {required ? <span style={{ color: "red" }}>*</span> : null}
               </label>

@@ -38,21 +38,21 @@ const IntroImages = () => {
         <ImageCard
           image={jobImg1}
           title="React"
-          aos="fade-right"
-          delay={100}
+          // aos="zoom-in"
+          // delay={100}
           className="rotate-[25deg]"
         />
         <ImageCard
           image={jobImg1}
           title="React"
-          aos="fade-left"
-          delay={200}
+          // aos="fade-left"
+          // delay={200}
           className="-rotate-[25deg]"
         />
       </div>
 
       <div className="flex justify-center">
-        <ImageCard image={jobImg1} title="React" delay={300} aos="fade-up" />
+        <ImageCard image={jobImg1} title="React" delay={300} />
       </div>
     </section>
   );
