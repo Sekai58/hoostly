@@ -1,4 +1,3 @@
-// import styles from "./page.module.css";
 import { projects } from "./data";
 import Card from "./ImageCard";
 import { useScroll } from "framer-motion";

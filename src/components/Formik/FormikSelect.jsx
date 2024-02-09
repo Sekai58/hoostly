@@ -25,11 +25,16 @@ const FormikSelect = ({
                 id={name}
                 value={meta.value}
                 onChange={onChange ? onChange : field.onChange}
-                className="block py-1 outline-none rounded-md border border-[#c3c3c3] focus:border-primary w-full sm:w-[90%] md:w-[60%] xl:w-[50%] max-w-[16rem]"
+                className=" block  py-1 outline-none border-b border-[#c3c3c3] focus:border-primary w-full sm:w-[90%] md:w-[60%] xl:w-[50%] max-w-[16rem]"
               >
                 {options.map((item, i) => {
                   return (
-                    <option key={i} value={item.value}>
+                    <option
+                      key={i}
+                      value={item.value}
+                      disabled={i === 0 ? true : false}
+                      className={`${i === 0 ? "hidden " : ""}`}
+                    >
                       {item.label}
                     </option>
                   );

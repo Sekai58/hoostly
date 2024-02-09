@@ -75,6 +75,7 @@ const JobForm = ({ setIsOpen, handleSubmit }) => {
                     name="experience"
                     label="Years of Experience:"
                     options={[
+                      { value: "", label: "Experience" },
                       { value: "one", label: "1" },
                       { value: "two", label: "2" },
                       { value: "three", label: "3" },

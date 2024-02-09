@@ -75,7 +75,7 @@ const HambergerMenu = () => {
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`fixed top-0 right-0 w-[100%] z-10 bg-gray-50 border-grayLine border-box h-screen sm:px-8 overflow-y-scroll no-scrollbar bg-white flex flex-col justify-between `}
+          className={`fixed top-0 right-0 w-[100%] z-10  border-grayLine border-box h-screen sm:px-8 overflow-y-scroll no-scrollbar bg-white flex flex-col justify-between `}
         >
           <div>
             <button
