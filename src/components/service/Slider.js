@@ -26,28 +26,30 @@ var settings = {
 
 const ImageSlider = () => {
   return (
-    <section className="px-2 md:px-4 xl:px-container mb-[8rem] flex justify-center">
-      <div className=" max-w-[80vw] md:max-w-[50vw] relative">
-        <Slider {...settings}>
-          {galleryImages.map((data, idx) => {
-            return (
-              <div
-                key={idx}
-                className={`w-full h-[14rem] xl:h-[18rem] relative text-white`}
-              >
-                <Link to="#">
-                  <div className="px-[3rem] py-[5rem] flex items-center max-h-[20rem] ">
-                    <img
-                      src={data}
-                      className="md:h-[20rem] w-full object-cover rounded-xl"
-                      alt="banner"
-                    />
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </Slider>
+    <section className="px-2 md:px-4 xl:px-container mb-[8rem] flex justify-center ">
+      <div className=" max-w-[80vw] md:max-w-[50vw] relative  bg-gradient-to-r  from-[#44ff9b31] via-[#8c44ff2e] to-[#ecff7033] ">
+        <div className="w-full  bg-white/30 backdrop-blur-xl backdrop-brightness-110 py-10 ">
+          <Slider {...settings}>
+            {galleryImages.map((data, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className={`w-full h-[14rem] xl:h-[18rem]  text-white`}
+                >
+                  <Link to="#">
+                    <div className="px-[3rem] py-[5rem] flex items-center max-h-[20rem] ">
+                      <img
+                        src={data}
+                        className="md:h-[20rem] w-full object-cover rounded-xl"
+                        alt="banner"
+                      />
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
       </div>
     </section>
   );

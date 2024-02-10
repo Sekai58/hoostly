@@ -1,6 +1,3 @@
-import { FiPhone } from "react-icons/fi";
-import { GrLocation } from "react-icons/gr";
-import { TfiEmail } from "react-icons/tfi";
 import { Form, Formik } from "formik";
 import FormikTextArea from "../Formik/FormikTextArea";
 import FormikInput from "../Formik/FormikInput";
@@ -24,7 +21,7 @@ const ServiceContact = () => {
     console.log("on submit", value);
   };
   return (
-    <section className="pt-[8rem] px-2 md:px-4 xl:px-container 2xl:px-[15rem] flex flex-col md:flex-row justify-between gap-20">
+    <section className="pt-[8rem] px-2 md:px-4 xl:px-container 2xl:px-[15rem] flex flex-col md:flex-row justify-between gap-20 mb-[8rem]">
       <div className="flex-1 ">
         <p className="font-bold uppercase mb-5">
           <PiSketchLogoBold className="text-xl" />

@@ -40,20 +40,22 @@ const ServiceCard = ({ reverse, image, title, description, link }) => {
 
 const ServiceCard1 = () => {
   return (
-    <div className="w-full xxl:max-w-[60vw]">
-      {serviceData1.map((service, idx) => {
-        return (
-          <ServiceCard
-            key={idx}
-            reverse={(idx + 1) % 2 === 0 ? true : false}
-            image={service.image}
-            title={service.serviceTitle}
-            description={service.serviceDescription}
-            link={service.link}
-          />
-        );
-      })}
-    </div>
+    <section className="px-2 md:px-4 xl:px-container pt-top xxl:flex xxl:flex-col xxl:items-center">
+      <div className="w-full xxl:max-w-[60vw]">
+        {serviceData1.map((service, idx) => {
+          return (
+            <ServiceCard
+              key={idx}
+              reverse={(idx + 1) % 2 === 0 ? true : false}
+              image={service.image}
+              title={service.serviceTitle}
+              description={service.serviceDescription}
+              link={service.link}
+            />
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

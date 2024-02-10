@@ -26,7 +26,7 @@ const MegaDropDown = ({ navTitle, menuData }) => {
                 </h3>
                 {col.links.map((link, idx) => {
                   return (
-                    <Link to="/career" key={idx}>
+                    <Link to="/service/1" key={idx}>
                       <p className="py-3">
                         <span
                           className="p-1 rounded-md hover:bg-blue-50"
