@@ -104,10 +104,10 @@ const Navbar = () => {
             Career
           </Link>
         </ul>
-        <div className="hidden xl:flex gap-4 h-fit">
+        <Link to="/contact-us" className="hidden xl:flex gap-4 h-fit">
           <GradientBtn label="Get in touch" />
           {/* <Border /> */}
-        </div>
+        </Link>
         <div className="w-full flex xl:hidden justify-end">
           <HambergerMenu />
         </div>
@@ -130,19 +130,21 @@ const Navbar = () => {
         </motion.div>
       ) : null}
 
-      <div className=" fixed bottom-0 z-[999] w-full sm:hidden bg-backgroundTransSecondary text-[#494949] flex justify-evenly items-center rounded-t-xl">
+      <div className="fixed bottom-0 left-0 z-[99] w-full sm:hidden bg-backgroundTransSecondary text-[#494949] flex justify-evenly items-center rounded-t-xl">
         <div className="flex flex-col items-center">
           <GoHome />
           <p className="text-[0.7rem]">Home</p>
         </div>
         <div className="flex flex-col items-center">
           <GoHome />
-          <p className="text-[0.7rem]">Home</p>
+          <Link to="/services" className="text-[0.7rem]">
+            Services
+          </Link>
         </div>
         <div className="rounded-full bg-backgroundTransSecondary flex items-center justify-center -translate-y-5 p-1">
-          <div className="rounded-full bg-[#008e459d] p-1">
+          <Link to="/" className="rounded-full bg-[#008e459d] p-1">
             <GoHome className="w-10 h-10 p-[11px] bg-primary rounded-full text-white font-bold" />
-          </div>
+          </Link>
         </div>
         <div className="flex flex-col items-center">
           <GoHome />
@@ -150,7 +152,7 @@ const Navbar = () => {
         </div>
         <div className="flex flex-col items-center">
           <GoHome />
-          <p className="text-[0.7rem]">Home</p>
+          <p className="text-[0.7rem]">Login</p>
         </div>
       </div>
     </>

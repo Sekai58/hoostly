@@ -3,7 +3,7 @@ import HeroSection from "../components/job/HeroSection";
 import Intro from "../components/job/newCards/InternIntro";
 import Benefits from "../components/job/newCards/Benefits";
 import Faq from "../components/job/newCards/Faq";
-import Opening from "../components/job/InternOpening";
+// import Opening from "../components/job/InternOpening";
 import Application from "../components/job/newCards/Application";
 import OurValues from "../components/job/newCards/OurValues";
 import OpenRoles from "../components/job/newCards/OpenRoles";

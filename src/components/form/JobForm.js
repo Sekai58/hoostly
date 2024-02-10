@@ -5,6 +5,7 @@ import { MdDelete } from "react-icons/md";
 import FormikImage from "../Formik/FormikImage";
 import FormikInput from "../Formik/FormikInput";
 import FormikSelect from "../Formik/FormikSelect";
+import FormikContactNumber from "../Formik/FormikContactNumber";
 
 const JobForm = ({ setIsOpen, handleSubmit }) => {
   const [filename, setFilename] = useState(null);
@@ -26,20 +27,16 @@ const JobForm = ({ setIsOpen, handleSubmit }) => {
     console.log("on submit", value);
   };
 
-  const handleError = (error) => {
-    console.log(error);
-  };
-
   const validationSchema = yup.object({
     firstName: yup.string().required(),
     lastName: yup.string().required(),
-    contactNumber: yup.number().required(),
+    contactNumber: yup.string().required(),
     experience: yup.string().required(),
     github: yup.string(),
     linkedIn: yup.string(),
     protfolio: yup.string(),
-    resume: yup.string().required(),
-    coverLetter: yup.string().required(),
+    // resume: yup.string().required(),
+    // coverLetter: yup.string().required(),
   });
 
   return (
@@ -47,13 +44,12 @@ const JobForm = ({ setIsOpen, handleSubmit }) => {
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
-        onError={handleError}
         validationSchema={validationSchema}
       >
         {(formik) => {
           return (
             <Form className="flex flex-col gap-8 xxl:w-[40rem]">
-              <div className="grid grid-cols-2 gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 <FormikInput
                   name="firstName"
                   label="First Name"
@@ -70,7 +66,7 @@ const JobForm = ({ setIsOpen, handleSubmit }) => {
                   required={true}
                 ></FormikInput>
 
-                <dic className="col-span-2">
+                <div className="sm:col-span-2">
                   <FormikSelect
                     name="experience"
                     label="Years of Experience:"
@@ -82,15 +78,17 @@ const JobForm = ({ setIsOpen, handleSubmit }) => {
                       { value: "more", label: "3+" },
                     ]}
                   ></FormikSelect>
-                </dic>
+                </div>
 
-                <FormikInput
+                <FormikContactNumber
                   name="contactNumber"
                   label="Enter contact number: "
                   className="block w-full border-b border-lightGray outline-none hover:border-primary focus:border-primary pb-2"
-                  type="number"
+                  type="text"
                   required={true}
-                ></FormikInput>
+                  setFieldValue={formik.setFieldValue}
+                  // setPhone={setPhone}
+                />
 
                 <FormikInput
                   name="github"

@@ -1,10 +1,20 @@
-import ServiceCard1 from "../components/service/ServiceCard1";
+import React from "react";
+import HeroSection from "../components/service/HeroSection";
+import ImageSlider from "../components/service/Slider";
+import HeroBottom from "../components/service/HeroBottom";
+import ScrollParallaxExample from "../components/service/ParallaxCards";
+import ServiceContact from "../components/service/Contact";
 
 const Service = () => {
   return (
-    <section className="px-2 md:px-4 xl:px-container pt-top xxl:flex xxl:flex-col xxl:items-center">
-      <ServiceCard1 />
-    </section>
+    <div>
+      <HeroSection />
+      <HeroBottom />
+      <ImageSlider />
+      <HeroBottom reverse={true} />
+      <ScrollParallaxExample />
+      <ServiceContact />
+    </div>
   );
 };
 

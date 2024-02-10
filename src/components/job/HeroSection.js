@@ -3,6 +3,7 @@ import GradientBtn from "../button/Gradient";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Image({ image }) {
   return (
@@ -26,7 +27,7 @@ const HeroSection = ({ data }) => {
     });
   }, []);
   return (
-    <div className=" pt-top mb-[8rem] flex flex-col">
+    <div className=" sm:pt-top mb-[8rem] flex flex-col">
       <section className="flex flex-col md:flex-row  gap-16 mt-10">
         <div className="flex-1 pl-2 md:pl-4 xl:pl-container mb-[7rem] md:mb-0 md:pb-[3rem]">
           {" "}
@@ -38,10 +39,12 @@ const HeroSection = ({ data }) => {
           </header>
           <p className="py-5 text-lg">
             {data.description}
-            <button className="mt-[2rem] flex items-center font-bold text-primary  gap-2">
-              {data.btn}
-              <IoIosArrowRoundForward className="text-3xl" />
-            </button>
+            <Link smooth to="/career#careerOpening">
+              <button className="mt-[2rem] flex items-center font-bold text-primary  gap-2">
+                {data.btn}
+                <IoIosArrowRoundForward className="text-3xl" />
+              </button>
+            </Link>
           </p>
         </div>
 

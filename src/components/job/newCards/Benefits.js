@@ -27,7 +27,7 @@ const BenefitCard = ({ icon, title, content, delay }) => {
 
 const Benefits = ({ data }) => {
   return (
-    <div className="bg-bgSecondary mb-[8rem] py-[4rem]">
+    <div className="bg-bgSecondary py-[4rem]">
       <Header
         title="Our Benefits"
         subTitle="We provide more than a learning experience at Leapfrog. Our
