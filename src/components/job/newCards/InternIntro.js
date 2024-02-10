@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // import Images from "./Images";
-import IntroImages from "./IntroImages";
+import IntroImages from "../IntroImages";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -12,9 +12,9 @@ const Intro = () => {
     });
   }, []);
   return (
-    <section className="px-2 md:px-4 xl:px-container bg-bgSecondary  grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <section className="px-2 md:px-4 xl:px-container bg-bgSecondary  grid grid-cols-1 lg:grid-cols-2 gap-10 mb-[8rem]">
       <div
-        className="w-full flex flex-col items-center py-10"
+        className="w-full flex flex-col items-center py-[4rem]"
         data-aos="zoom-in"
         delay={300}
       >
@@ -22,7 +22,9 @@ const Intro = () => {
       </div>
       <aside className="py-10">
         <p className="uppercase font-bold">learn with best</p>
-        <h3 className="text-5xl font-bold my-3">It all starts here</h3>
+        <h3 className="text-5xl font-bold my-3 text-transparent bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text">
+          It all starts here
+        </h3>
         <p className="font-semibold text-[1.5rem] my-7">
           have an unrelenting pride in craftsmanship and believe in creating
           impact in industries and ecosystems. Be a part of Leapfrog to

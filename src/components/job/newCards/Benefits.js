@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Header from "./Header";
+import Header from "../Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -27,15 +27,15 @@ const BenefitCard = ({ icon, title, content, delay }) => {
 
 const Benefits = ({ data }) => {
   return (
-    <div className="bg-bgSecondary">
+    <div className="bg-bgSecondary mb-[8rem] py-[4rem]">
       <Header
-        title="All work and all play"
+        title="Our Benefits"
         subTitle="We provide more than a learning experience at Leapfrog. Our
           internships are highly engaging, results-oriented and lets you
           experience the Leapfrog difference first-hand."
       />
       <section className="px-2 md:px-4 xl:px-container flex flex-col items-center">
-        <div className="flex flex-wrap items-center justify-center py-10 gap-5 md:gap-12 ">
+        <div className="flex flex-wrap items-center justify-center gap-5 md:gap-12 ">
           {data?.map((item, idx) => {
             return (
               <BenefitCard

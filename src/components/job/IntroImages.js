@@ -1,4 +1,4 @@
-import jobImg1 from "../../assets/images/jobImg1.png";
+import jobImg1 from "../../assets/images/reactImg.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -10,7 +10,7 @@ const ImageCard = ({ image, title, className, aos, delay }) => {
       data-aos-delay={delay}
       className={`border rounded-md rounded-br-[3rem] bg-white shadow-lg border-grayLine overflow-hidden ${className}`}
     >
-      <div className="overflow-hidden w-[5rem] h-[4rem] sm:w-[12rem] sm:h-[10rem] bg-red-400">
+      <div className="overflow-hidden w-[5rem] h-[4rem] sm:w-[12rem] sm:h-[10rem] border-b">
         <img
           src={image}
           className="w-[5rem] h-[4rem] sm:w-[12rem] sm:h-[10rem] bg-cover object-cover hover:rotate-12 hover:scale-125"

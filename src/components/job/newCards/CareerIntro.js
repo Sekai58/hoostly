@@ -3,8 +3,8 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Intro = () => {
   return (
-    <div className="bg-bgSecondary py-10 px-2 md:px-4 xl:px-container">
-      <h3 className="px-2 md:px-4 xl:px-container flex justify-center text-transparent font-bold text-3xl bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text pt-[4rem] pb-2 overflow-visible text-center">
+    <div className="bg-bgSecondary py-[3rem] px-2 md:px-4 xl:px-container mb-[8rem]">
+      <h3 className="px-2 md:px-4 xl:px-container flex justify-center text-transparent font-bold text-3xl bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text pb-2 overflow-visible text-center">
         Let's get you started
       </h3>
       <p className="w-full flex justify-center mb-10">

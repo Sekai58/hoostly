@@ -1,10 +1,14 @@
 import React from "react";
 import HeroSection from "../components/job/HeroSection";
-import Intro from "../components/job/InternIntro";
-import Benefits from "../components/job/Benefits";
-import Faq from "../components/job/Faq";
+import Intro from "../components/job/newCards/InternIntro";
+import Benefits from "../components/job/newCards/Benefits";
+import Faq from "../components/job/newCards/Faq";
 import Opening from "../components/job/InternOpening";
-import Application from "../components/job/Application";
+import Application from "../components/job/newCards/Application";
+import OurValues from "../components/job/newCards/OurValues";
+import OpenRoles from "../components/job/newCards/OpenRoles";
+import { openingData } from "../assets/data/openingData";
+import { ourValuesData } from "../assets/data/ourValuesData";
 import { internApplicationData } from "../assets/data/applicationData";
 import { faqData } from "../assets/data/faqData";
 import { internBenefits } from "../assets/data/benefitsData";
@@ -15,9 +19,11 @@ const Internship = () => {
     <>
       <HeroSection data={internHeroData} />
       <Intro />
-      <Application data={internApplicationData} />
+      <OurValues ourValuesData={ourValuesData} />
       <Benefits data={internBenefits} />
-      <Opening />
+      <OpenRoles openings={openingData} />
+      <Application data={internApplicationData} />
+      {/* <Opening /> */}
       <Faq data={faqData} />
     </>
   );

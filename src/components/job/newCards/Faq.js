@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "./Header";
+import Header from "../Header";
 import { CgMathMinus, CgMathPlus } from "react-icons/cg";
 import { motion } from "framer-motion";
 import {
@@ -22,12 +22,12 @@ const Faq = ({ data }) => {
   };
 
   return (
-    <div className="bg-bgSecondary">
+    <div className="bg-bgSecondary py-[4rem]">
       <Header
         title="Frequently asked Questions "
         subTitle="No more burning questions, just burning excitement to join our team."
       />
-      <section className="px-2 md:px-4 xl:px-container pt-[2rem] pb-[4rem]">
+      <section className="px-2 md:px-4 xl:px-container pt-[2rem] ">
         <Accordion allowZeroExpanded>
           {data?.map((faq, idx) => {
             return (

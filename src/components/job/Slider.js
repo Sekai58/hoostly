@@ -24,7 +24,7 @@ var settings = {
 
 const ImageSlider = () => {
   return (
-    <section className="px-2 md:px-4 xl:px-container mb-[4rem]">
+    <section className="px-2 md:px-4 xl:px-container mb-[8rem]">
       <Slider {...settings}>
         {galleryImages.map((data, idx) => {
           return (

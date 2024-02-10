@@ -1,13 +1,7 @@
-import { ourValuesData } from "../../assets/data/ourValuesData";
+// import { ourValuesData } from "../../../assets/data/ourValuesData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
-const leftcolData = ourValuesData.slice(0, ourValuesData.length / 2);
-const rightcolData = ourValuesData.slice(
-  ourValuesData.length / 2,
-  ourValuesData.length
-);
 
 const ValueCard = ({ valueTitle, icon, valueDescription }) => {
   useEffect(() => {
@@ -24,7 +18,7 @@ const ValueCard = ({ valueTitle, icon, valueDescription }) => {
       {icon}
       <h4 className="text-2xl font-semibold">{valueTitle}</h4>
 
-      {valueDescription.map((description, idx) => {
+      {valueDescription?.map((description, idx) => {
         return (
           <p
             key={idx}
@@ -40,9 +34,14 @@ const ValueCard = ({ valueTitle, icon, valueDescription }) => {
   );
 };
 
-const OurValues = () => {
+const OurValues = ({ ourValuesData }) => {
+  const leftcolData = ourValuesData?.slice(0, ourValuesData.length / 2);
+  const rightcolData = ourValuesData?.slice(
+    ourValuesData.length / 2,
+    ourValuesData.length
+  );
   return (
-    <section className="px-2 md:px-4 xl:px-container flex justify-center pb-[4rem]">
+    <section className="px-2 md:px-4 xl:px-container flex justify-center mb-[8rem]">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 xxl:w-[60vw]">
         <div className="flex flex-col gap-4">
           <div>
@@ -56,7 +55,7 @@ const OurValues = () => {
             </p>
           </div>
 
-          {leftcolData.map((value, idx) => {
+          {leftcolData?.map((value, idx) => {
             return (
               <ValueCard
                 key={idx}
@@ -69,7 +68,7 @@ const OurValues = () => {
         </div>
 
         <div className="flex flex-col gap-4">
-          {rightcolData.map((value, idx) => {
+          {rightcolData?.map((value, idx) => {
             return (
               <ValueCard
                 key={idx}

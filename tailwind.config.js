@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xxl: "1280px",
+        xxl: "1870px",
       },
       padding: {
         "1/2": "50%",

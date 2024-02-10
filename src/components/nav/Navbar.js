@@ -60,13 +60,13 @@ const Navbar = () => {
             : `${scrolled ? "bg-white shadow-lg" : "bg-transparent"}`
         } hidden sm:flex justify-between items-center px-2 md:px-4  xl:px-container py-3`}
       >
-        <Link
-          to="/"
-          className="flex items-center h-10 text-xl lg:text-2xl font-bold  text-primary"
-        >
-          Hoostly
-        </Link>
         <ul className="hidden xl:flex gap-4 items-center">
+          <Link
+            to="/"
+            className="flex items-center h-10 text-xl lg:text-2xl font-bold  text-primary"
+          >
+            Hoostly
+          </Link>
           {navDatas.map((navData, idx) => {
             return (
               <li
@@ -75,7 +75,7 @@ const Navbar = () => {
                   showMegaMenu
                     ? "text-[#232323]"
                     : `${
-                        location.pathname !== "/" ? "text-black" : "text-white"
+                        location.pathname !== "/" ? "text-black" : "text-black"
                       }`
                 } font-medium flex items-center gap-1`}
                 onClick={() => {
@@ -97,6 +97,12 @@ const Navbar = () => {
               </li>
             );
           })}
+          <Link
+            to="/career"
+            className="flex items-center  font-medium  text-[#232323]"
+          >
+            Career
+          </Link>
         </ul>
         <div className="hidden xl:flex gap-4 h-fit">
           <GradientBtn label="Get in touch" />

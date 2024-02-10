@@ -1,10 +1,10 @@
 import React from "react";
 import Values from "../components/job/Values";
 import ParallaxGallery from "../components/testpage/ScrollEffect";
-import OurValues from "../components/job/OurValues";
-import OurBenefits from "../components/job/OurBenefits";
+import OurValues from "../components/job/newCards/OurValues";
+import OurBenefits from "../components/job/newCards/OurBenefits";
 import { careerBenefits } from "../assets/data/benefitsData";
-import OpenRoles from "../components/job/OpenRoles";
+import OpenRoles from "../components/job/newCards/OpenRoles";
 import { openingData } from "../assets/data/openingData";
 
 const Home = () => {

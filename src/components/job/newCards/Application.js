@@ -1,5 +1,5 @@
 // import React from "react";
-import Header from "./Header";
+import Header from "../Header";
 import { BsCameraVideoFill } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,12 +13,13 @@ const Application = ({ data }) => {
     });
   }, []);
   return (
-    <>
+    <section className="px-2 md:px-4 xl:px-container mb-[8rem]">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 xxl:w-[60vw] "> */}
       <Header
-        title="Your Application Journey"
-        subTitle="Steps to apply internship"
+        title="Application Journey"
+        subTitle="What we love and stand for every day"
       />
-      <section className="px-2 md:px-4 xl:px-container flex flex-col items-center pb-[4rem]">
+      <section className="flex justify-center">
         <table className="max-w-[31rem]">
           <tbody className="p-0 m-0">
             {data?.map((internData, idx) => {
@@ -52,7 +53,8 @@ const Application = ({ data }) => {
           </tbody>
         </table>
       </section>
-    </>
+      {/* </div> */}
+    </section>
   );
 };
 

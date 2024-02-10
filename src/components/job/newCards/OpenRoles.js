@@ -14,7 +14,7 @@ const OpenRoles = ({ openings }) => {
   return (
     <section
       data-aos="zoom-in"
-      className="px-2 md:px-4 xl:px-container  flex  justify-center mb-[5rem] "
+      className="px-2 md:px-4 xl:px-[12rem]  flex  justify-center mb-[8rem] "
     >
       <div className="w-full xxl:w-[60vw] border border-lightGray rounded-2xl p-16 bg-gradient-to-r from-[#ffefba] to-[#ffffff] ">
         <div className="header">

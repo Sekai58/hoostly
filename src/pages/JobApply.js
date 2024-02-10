@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import JobForm from "../components/form/JobForm";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import JobDescription from "../components/job/JobDescription";
+import JobDescription from "../components/job/newCards/JobDescription";
 
 const tabs = ["Job Description", "Apply"];
 
