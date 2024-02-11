@@ -16,8 +16,8 @@ const Service = () => {
       <ImageSlider />
       <HeroBottom reverse={true} />
       <ServiceCard2 />
-      <ServiceCard1 />
       <ServiceCard3 />
+      <ServiceCard1 />
       <ScrollParallaxExample />
       <ServiceContact />
     </div>

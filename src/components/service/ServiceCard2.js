@@ -11,7 +11,7 @@ const ServiceCard2 = () => {
     });
   }, []);
   return (
-    <div className="px-2 md:px-4 xl:px-contailer xxl:flex xxl:justify-center">
+    <div className="px-2 md:px-4 xl:px-container xxl:flex xxl:justify-center mb-[8rem]">
       <div className=" xxl:max-w-[60vw] ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-md relative">

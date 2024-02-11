@@ -103,6 +103,9 @@ const Navbar = () => {
           <Link
             to="/career"
             className="flex items-center  font-medium  text-[#232323]"
+            onClick={() => {
+              dispatch(navbarClose());
+            }}
           >
             Career
           </Link>
