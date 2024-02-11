@@ -19,9 +19,9 @@ const Application = ({ data }) => {
         title="Application Journey"
         subTitle="What we love and stand for every day"
       />
-      <section className="flex justify-center">
-        <table className="max-w-[31rem]">
-          <tbody className="px-8 sm:p-0 m-0">
+      <section className="flex justify-center px-5">
+        <table className="max-w-[31rem] p-5">
+          <tbody className="p-0 m-0">
             {data?.map((internData, idx) => {
               return (
                 <tr key={idx} className="p-0 m-0">
@@ -38,7 +38,7 @@ const Application = ({ data }) => {
                   <td
                     data-aos="zoom-in-left"
                     data-aos-delay={(idx + 1) * 50}
-                    className={`font-bold text-2xl pl-5 text-gradientStart ${
+                    className={`font-bold text-xl sm:text-2xl pl-5 text-gradientStart ${
                       idx !== data.length - 1 ? "pb-5" : ""
                     }`}
                   >
