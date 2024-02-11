@@ -16,7 +16,7 @@ const JobApply = () => {
   const jobTitle = params.id.split("-").join(" ");
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   return (
-    <div className=" px-2 md:px-4 xl:px-container flex mt-[4.5rem]">
+    <div className=" px-2 md:px-4 xl:px-container flex mt-[4.5rem] mb-[8rem]">
       <div className="xxl:w-[70vw] flex flex-col items-start">
         <div className="header">
           <h3 className="pb-2  mt-[4rem] mb-[2rem] flex justify-start text-transparent font-bold text-5xl bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text overflow-visible">

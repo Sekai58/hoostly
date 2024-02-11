@@ -35,7 +35,7 @@ const ContactForm = () => {
     console.log("on submit", value);
   };
   return (
-    <section className="pt-[8rem] px-2 md:px-4 xl:px-container 2xl:px-[15rem] flex justify-between">
+    <section className="pt-[8rem] px-2 md:px-4 xl:px-container 2xl:px-[15rem] flex flex-col md:flex-row justify-between mb-[8rem]">
       <div className="flex-1">
         <p className="font-bold uppercase mb-5">Contact Sales</p>
         <h3 className="mb-3 text-transparent font-bold text-5xl bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text overflow-visible">
@@ -90,7 +90,7 @@ const ContactForm = () => {
         {(formik) => {
           return (
             <Form className=" flex-[0.6] flex flex-col gap-5 border border-primary rounded-xl py-5 px-4">
-              <section className="grid grid-cols-2 gap-7 text-textLight text-lg">
+              <section className="grid grid-cols-1 sm:grid-cols-2 gap-7 text-textLight text-lg">
                 <FormikInput
                   name="firstName"
                   label="First Name"
@@ -107,7 +107,7 @@ const ContactForm = () => {
                   required={true}
                 ></FormikInput>
 
-                <div className="col-span-2">
+                <div className="col-span-1 sm:col-span-2">
                   <FormikInput
                     name="email"
                     label="Email"
@@ -149,7 +149,7 @@ const ContactForm = () => {
                   // required={true}
                 ></FormikInput>
 
-                <div className="col-span-2 ">
+                <div className="col-span-1 sm:col-span-2 ">
                   {" "}
                   <FormikInput
                     name="country"
@@ -159,7 +159,7 @@ const ContactForm = () => {
                     // required={true}
                   ></FormikInput>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-1 sm:col-span-2">
                   <FormikTextArea
                     name="message"
                     label="Send Message"
