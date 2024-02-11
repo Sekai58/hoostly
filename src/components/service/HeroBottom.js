@@ -1,10 +1,20 @@
 import { IoIosArrowRoundForward } from "react-icons/io";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import img1 from "../../assets/images/service.png";
 import img2 from "../../assets/images/service1.png";
+import { useEffect } from "react";
 const ImageGallery = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <div className="flex-1 w-full flex items-center justify-center ">
       <div
+        data-aos="fade-left"
         className={` rounded-xl  bg-white shadow-gray-500 shadow-lg  overflow-hidden translate-x-2`}
       >
         <img
@@ -23,6 +33,7 @@ const ImageGallery = () => {
         />
       </div>
       <div
+        data-aos="fade-right"
         className={` rounded-xl  bg-white shadow-gray-500 shadow-lg  overflow-hidden -translate-x-2`}
       >
         <img

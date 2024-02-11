@@ -17,48 +17,46 @@ const ScrollParallaxExample = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
 
   const topLeftCardPosition = {
     x:
-      (window.innerWidth < 850 ? 50 : 130) *
+      (window.innerWidth > 1580 ? 100 : 50) *
       (scrollPosition / window.innerHeight),
     y:
-      (window.innerWidth < 850 ? 50 : 130) *
+      (window.innerWidth > 1580 ? 90 : 50) *
       (scrollPosition / window.innerHeight),
   };
 
   const bottomLeftCardPosition = {
     x:
-      (window.innerWidth < 850 ? 50 : 130) *
+      (window.innerWidth > 1580 ? 100 : 50) *
       (scrollPosition / window.innerHeight),
     y:
-      (window.innerWidth < 850 ? -50 : -130) *
+      (window.innerWidth > 1580 ? -90 : -50) *
       (scrollPosition / window.innerHeight),
   };
   const topRightCardPosition = {
     x:
-      (window.innerWidth < 850 ? -50 : -130) *
+      (window.innerWidth > 1580 ? -100 : -50) *
       (scrollPosition / window.innerHeight),
     y:
-      (window.innerWidth < 850 ? 50 : 130) *
+      (window.innerWidth > 1580 ? 90 : 50) *
       (scrollPosition / window.innerHeight),
   };
   const bottomRightCardPosition = {
     x:
-      (window.innerWidth < 850 ? -50 : -130) *
+      (window.innerWidth > 1580 ? -100 : -50) *
       (scrollPosition / window.innerHeight),
     y:
-      (window.innerWidth < 850 ? -50 : -130) *
+      (window.innerWidth > 1580 ? -90 : -50) *
       (scrollPosition / window.innerHeight),
   };
 
-  const translateX = [];
-
   return (
     <ParallaxProvider>
-      <div className="px-2 sm:px-4 xl:px-container xxl:max-w[60vw] mb-[8rem]">
-        <div className="h-[80vh] bg-bgSecondary">
+      <div className="px-2 sm:px-4 xl:px-[18rem] xxl:max-w[60vw] mb-[8rem]">
+        <div className="h-[80vh] bg-bgSecondary ">
           <ParallaxBanner
             layers={[
               {
@@ -71,39 +69,40 @@ const ScrollParallaxExample = () => {
               height: "100%",
               width: "100%",
               objectFit: "contain",
+              position: "relative",
             }}
           >
             <div
-              className="absolute -top-32 -left-20 w-[100px] h-[100px]  flex justify-center items-center"
+              className="absolute z-10 -top-[16rem] -left-[6rem] w-[100px] h-[100px]  flex justify-center items-center"
               style={{
                 transform: `translate(${topLeftCardPosition.x}px, ${topLeftCardPosition.y}px)`,
               }}
             >
-              <img src={profileImg} />
+              <img src={profileImg} alt="" />
             </div>
             <div
-              className="absolute -bottom-32 -left-20 w-[100px] h-[100px]  flex justify-center items-center"
+              className="absolute z-10 -bottom-[16rem] -left-[6rem] w-[100px] h-[100px]  flex justify-center items-center"
               style={{
                 transform: `translate(${bottomLeftCardPosition.x}px, ${bottomLeftCardPosition.y}px)`,
               }}
             >
-              <img src={profileImg} />
+              <img src={profileImg} alt="" />
             </div>
             <div
-              className="absolute -top-32 -right-20 w-[100px] h-[100px] flex justify-center items-center"
+              className="absolute z-10 -top-[16rem] -right-[6rem] w-[100px] h-[100px] flex justify-center items-center"
               style={{
                 transform: `translate(${topRightCardPosition.x}px, ${topRightCardPosition.y}px)`,
               }}
             >
-              <img src={profileImg} />
+              <img src={profileImg} alt="" />
             </div>
             <div
-              className="absolute -bottom-32 -right-20 w-[100px] h-[100px] flex justify-center items-center "
+              className="absolute z-10 -bottom-[16rem] -right-[6rem] w-[100px] h-[100px] flex justify-center items-center "
               style={{
                 transform: `translate(${bottomRightCardPosition.x}px, ${bottomRightCardPosition.y}px)`,
               }}
             >
-              <img src={profileImg} />
+              <img src={profileImg} alt="" />
             </div>
           </ParallaxBanner>
         </div>

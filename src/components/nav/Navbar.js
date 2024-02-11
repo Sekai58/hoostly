@@ -64,6 +64,9 @@ const Navbar = () => {
           <Link
             to="/"
             className="flex items-center h-10 text-xl lg:text-2xl font-bold  text-primary"
+            onClick={() => {
+              dispatch(navbarClose());
+            }}
           >
             Hoostly
           </Link>
