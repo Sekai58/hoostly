@@ -13,7 +13,7 @@ const BenefitCard = ({ icon, title, content, delay }) => {
 
   return (
     <div
-      data-aos="fade-down-left"
+      data-aos="fade-down"
       data-aos-delay={delay}
       className="flex flex-col gap-5 max-w-[16rem] "
     >

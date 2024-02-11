@@ -12,6 +12,7 @@ const Application = ({ data }) => {
       once: false,
     });
   }, []);
+
   return (
     <section className="px-2 md:px-4 xl:px-container mb-[8rem]">
       {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 xxl:w-[60vw] "> */}
@@ -36,9 +37,9 @@ const Application = ({ data }) => {
                     </span>
                   </td>
                   <td
-                    data-aos="zoom-in-left"
+                    data-aos="zoom-in"
                     data-aos-delay={(idx + 1) * 50}
-                    className={`font-bold text-xl sm:text-2xl pl-5 text-gradientStart ${
+                    className={`font-bold text-xl sm:text-2xl pl-5 text-gradientStart pr-5 ${
                       idx !== data.length - 1 ? "pb-5" : ""
                     }`}
                   >
