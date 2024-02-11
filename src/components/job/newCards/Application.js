@@ -19,8 +19,8 @@ const Application = ({ data }) => {
         title="Application Journey"
         subTitle="What we love and stand for every day"
       />
-      <section className="flex justify-center px-5">
-        <table className="max-w-[31rem] p-5">
+      <section className="flex justify-center">
+        <table className="max-w-[31rem]">
           <tbody className="p-0 m-0">
             {data?.map((internData, idx) => {
               return (
