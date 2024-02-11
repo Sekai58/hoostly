@@ -21,7 +21,7 @@ const Application = ({ data }) => {
       />
       <section className="flex justify-center">
         <table className="max-w-[31rem]">
-          <tbody className="p-0 m-0">
+          <tbody className="px-8 sm:p-0 m-0">
             {data?.map((internData, idx) => {
               return (
                 <tr key={idx} className="p-0 m-0">
