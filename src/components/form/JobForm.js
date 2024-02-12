@@ -6,6 +6,7 @@ import FormikImage from "../Formik/FormikImage";
 import FormikInput from "../Formik/FormikInput";
 import FormikSelect from "../Formik/FormikSelect";
 import FormikContactNumber from "../Formik/FormikContactNumber";
+import GradientButton from "../button/GradientBtn";
 
 const JobForm = ({ setIsOpen, handleSubmit }) => {
   const [filename, setFilename] = useState(null);
@@ -151,12 +152,9 @@ const JobForm = ({ setIsOpen, handleSubmit }) => {
                 )}
               </div>
 
-              <button
-                type="submit"
-                className="w-fit py-2 px-5 text-center font-medium text-white bg-gradient-to-r from-gradientStart to-gradientEnd  rounded-md"
-              >
+              <GradientButton type="submit" label="Submit">
                 Submit
-              </button>
+              </GradientButton>
             </Form>
           );
         }}

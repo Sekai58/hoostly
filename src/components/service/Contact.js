@@ -2,6 +2,7 @@ import { Form, Formik } from "formik";
 import FormikTextArea from "../Formik/FormikTextArea";
 import FormikInput from "../Formik/FormikInput";
 import { PiSketchLogoBold } from "react-icons/pi";
+import GradientButton from "../button/GradientBtn";
 
 const ServiceContact = () => {
   const initialValues = {
@@ -129,12 +130,11 @@ const ServiceContact = () => {
                 </div>
               </section>
 
-              <button
+              <GradientButton
                 type="submit"
-                className="w-full  py-2 px-3 text-center font-medium text-white bg-gradient-to-r from-gradientStart to-gradientEnd rounded-md mt-4"
-              >
-                Submit
-              </button>
+                label="Submit"
+                className="w-full text-center mt-4"
+              />
             </Form>
           );
         }}

@@ -7,11 +7,12 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 import { motion } from "framer-motion";
 // import Example from "../button/BorderAnimate";
 import { Link, useLocation } from "react-router-dom";
-import GradientBtn from "../button/Gradient";
+// import GradientBtn from "../button/Gradient";
 import HambergerMenu from "./HamburgerMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { navbarClose, navbarOpen } from "../../redux/features/navbarSlice";
 import { GoHome } from "react-icons/go";
+import GradientButton from "../button/GradientBtn";
 
 const Navbar = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(null);
@@ -111,8 +112,9 @@ const Navbar = () => {
           </Link>
         </ul>
         <Link to="/contact-us" className="hidden xl:flex gap-4 h-fit">
-          <GradientBtn label="Get in touch" />
+          {/* <GradientBtn label="Get in touch" /> */}
           {/* <Border /> */}
+          <GradientButton label="Get in touch" />
         </Link>
         <div className="w-full flex xl:hidden justify-end">
           <HambergerMenu />

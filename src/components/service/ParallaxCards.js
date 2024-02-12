@@ -56,7 +56,7 @@ const ScrollParallaxExample = () => {
   return (
     <ParallaxProvider>
       <div className="px-2 sm:px-4 xl:px-[18rem] xxl:max-w[60vw] mb-[8rem]">
-        <div className="h-[80vh] bg-bgSecondary ">
+        <div className="h-[80vh] bg-backgroundTransSecondary rounded-xl">
           <ParallaxBanner
             layers={[
               {
@@ -73,7 +73,7 @@ const ScrollParallaxExample = () => {
             }}
           >
             <div
-              className="absolute z-10 -top-[16rem] -left-[6rem] w-[100px] h-[100px]  flex justify-center items-center"
+              className="absolute z-10 -top-[25rem] -left-[10rem] xxl:-top-[32rem] xxl:-left-[15rem] w-[100px] h-[100px]  flex justify-center items-center"
               style={{
                 transform: `translate(${topLeftCardPosition.x}px, ${topLeftCardPosition.y}px)`,
               }}
@@ -81,7 +81,7 @@ const ScrollParallaxExample = () => {
               <img src={profileImg} alt="" />
             </div>
             <div
-              className="absolute z-10 -bottom-[16rem] -left-[6rem] w-[100px] h-[100px]  flex justify-center items-center"
+              className="absolute z-10 -bottom-[25rem] -left-[10rem] xxl:-bottom-[32rem] xxl:-left-[15rem] w-[100px] h-[100px]  flex justify-center items-center"
               style={{
                 transform: `translate(${bottomLeftCardPosition.x}px, ${bottomLeftCardPosition.y}px)`,
               }}
@@ -89,7 +89,7 @@ const ScrollParallaxExample = () => {
               <img src={profileImg} alt="" />
             </div>
             <div
-              className="absolute z-10 -top-[16rem] -right-[6rem] w-[100px] h-[100px] flex justify-center items-center"
+              className="absolute z-10 -top-[25rem] -right-[10rem] xxl:-top-[32rem] xxl:-right-[15rem] w-[100px] h-[100px] flex justify-center items-center"
               style={{
                 transform: `translate(${topRightCardPosition.x}px, ${topRightCardPosition.y}px)`,
               }}
@@ -97,7 +97,7 @@ const ScrollParallaxExample = () => {
               <img src={profileImg} alt="" />
             </div>
             <div
-              className="absolute z-10 -bottom-[16rem] -right-[6rem] w-[100px] h-[100px] flex justify-center items-center "
+              className="absolute z-10 -bottom-[25rem] -right-[10rem] xxl:-bottom-[32rem] xxl:-right-[15rem] w-[100px] h-[100px] flex justify-center items-center "
               style={{
                 transform: `translate(${bottomRightCardPosition.x}px, ${bottomRightCardPosition.y}px)`,
               }}

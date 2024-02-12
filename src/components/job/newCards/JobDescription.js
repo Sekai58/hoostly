@@ -1,3 +1,5 @@
+import GradientButton from "../../button/GradientBtn";
+
 const JobDescription = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-between w-full gap-10">
@@ -99,9 +101,7 @@ const JobDescription = () => {
         </div>
       </div>
       <div className="w-[18rem]">
-        <button className="w-full flex justify-center py-3 bg-primary text-white hover:bg-opacity-75 rounded-md">
-          Apply
-        </button>
+        <GradientButton className="w-full flex justify-center" label="Apply" />
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ const ServiceCard3 = () => {
     <section className="px-2 md:px-4 xl:px-container xxl:flex xxl:justify-center mb-[8rem]">
       <div className="xxl:max-w-[60vw]">
         <div className="flex flex-col gap-8">
-          <div className="flex gap-8">
+          <div className="flex flex-col sm:flex-row gap-8">
             <div className="flex-1 bg-[#ffb907] rounded-xl p-5 relative ">
               <img
                 data-aos="zoom-in"
@@ -33,7 +33,7 @@ const ServiceCard3 = () => {
               />
             </div>
           </div>
-          <div className="flex gap-8">
+          <div className="flex flex-col sm:flex-row gap-8">
             <div className="flex-1 bg-[#fff8e6] rounded-xl p-7">
               <p className="text-xl font-medium">
                 Use HiHello’s built-in, AI-powered business card scanner to

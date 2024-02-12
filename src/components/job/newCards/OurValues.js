@@ -12,8 +12,8 @@ const ValueCard = ({ valueTitle, icon, valueDescription }) => {
   }, []);
   return (
     <div
-      data-aos="flip-right"
-      className="flex flex-col gap-5 border rounded-xl p-3 bg-gradient-to-br from-[#d3cce3] to-[#ffffff]"
+      data-aos="fade-up"
+      className="flex flex-col gap-5 border rounded-xl p-3 bg-gradient-to-tr from-[#bfe4ea] to-[#e3f9e7]"
     >
       {icon}
       <h4 className="text-2xl font-semibold">{valueTitle}</h4>

@@ -26,15 +26,11 @@ const images = [
 ];
 const SmallImageGallery = ({ images }) => {
   return (
-    <div className="md:hidden flex justify-center gap-8">
+    <div className="md:hidden flex gap-8">
       {images.map((image, idx) => {
         return (
-          <div key={idx} className="h-[12rem] w-[12rem] rounded-md">
-            <img
-              src={image}
-              className="object-cover rounded-md"
-              alt="career hero section"
-            />
+          <div key={idx} className="h-[12rem w-12rem rounded-md">
+            <img src={image} className="object-cover rounded-md" />
           </div>
         );
       })}
@@ -44,21 +40,19 @@ const SmallImageGallery = ({ images }) => {
 
 const ImageGallery = () => {
   return (
-    <div className="flex gap-8">
+    <div className="flex flex-col gap-8">
       <div className="flex flex-col justify-center gap-8">
         <div className="flex gap-8 items-end justify-end">
           <div>
             <img
               className="md:max-w-[7rem] xl:max-w-[10rem] xxl:max-w-[12rem] rounded-xl"
               src="https://assets-global.website-files.com/61d72a2cda50bc679e28766b/649ea6d64cae62095c01ed6a_offsite05.webp"
-              alt="career hero section"
             />
           </div>
           <div>
             <img
               className="md:max-w-[9rem] xl:max-w-[12rem] xxl:max-w-[14rem] rounded-xl"
               src="https://assets-global.website-files.com/61d72a2cda50bc679e28766b/649ea6d54750456d61456a83_offsite02.webp"
-              alt="career hero section"
             />
           </div>
         </div>
@@ -66,7 +60,6 @@ const ImageGallery = () => {
           <img
             className="rounded-md"
             src="https://assets-global.website-files.com/61d72a2cda50bc679e28766b/649ea6d6651dbeaadfd8d729_offsite04-p-500.webp"
-            alt="career hero section"
           />
         </div>
       </div>
@@ -75,14 +68,12 @@ const ImageGallery = () => {
           <img
             className="md:max-w-[9rem] xl:max-w-[10rem] xxl:max-w-[12rem] h-full bg-cover rounded-xl"
             src="https://assets-global.website-files.com/61d72a2cda50bc679e28766b/649ea6d6cf25ca83c7aa46f6_offsite03-p-500.webp"
-            alt="career hero section"
           />
         </div>
         <div className="flex-1">
           <img
             className=" md:max-h-[20rem] xl:max-h-none md:max-w-[9rem] xl:max-w-[10rem] xxl:max-w-[12rem] h-full object-cover rounded-xl"
             src="https://assets-global.website-files.com/61d72a2cda50bc679e28766b/649ea6d631d45fe4e0d2aa2c_offsite01.webp"
-            alt="career hero section"
           />
         </div>
       </div>

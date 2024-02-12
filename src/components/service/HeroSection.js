@@ -1,4 +1,6 @@
 import "aos/dist/aos.css";
+import GradientButton from "../button/GradientBtn";
+import PrimaryBtn from "../button/PrimaryBtn";
 
 function Image() {
   return (
@@ -29,13 +31,9 @@ const HeroSection = ({ data }) => {
             Loved by millions worldwide, HiHello helps everyone—from individuals
             to enterprises—turn each customer touchpoint into a branded,
             interactive, and measurable opportunity.
-            <div className=" flex gap-3 items-center">
-              <button className="mt-[2rem] flex items-center font-bold bg-primary py-1 px-2 rounded-md text-white  gap-2">
-                Sign Up for free
-              </button>
-              <button className="mt-[2rem] flex items-center font-bold text-primary py-1 px-2 rounded-md border border-primary  gap-2">
-                Contact Sales
-              </button>
+            <div className=" flex gap-3 items-center mt-4">
+              <GradientButton label="Sign up for free" />
+              <PrimaryBtn label="Contact Sales" />
             </div>
           </p>
         </div>
