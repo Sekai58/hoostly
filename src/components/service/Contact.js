@@ -22,10 +22,10 @@ const ServiceContact = () => {
     console.log("on submit", value);
   };
   return (
-    <section className="pt-[8rem] px-2 md:px-4 xl:px-container 2xl:px-[15rem] flex flex-col md:flex-row justify-between gap-20 mb-[8rem]">
+    <section className="px-2 md:px-4 xl:px-container 2xl:px-[15rem] flex flex-col md:flex-row justify-between gap-20 mb-[8rem]">
       <div className="flex-1 ">
         <p className="font-bold uppercase mb-5">
-          <PiSketchLogoBold className="text-xl" />
+          <PiSketchLogoBold className="text-3xl" />
         </p>
         <h3 className="mb-8 text-transparent font-bold text-5xl bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text overflow-visible">
           Trusted by Education Leaders
